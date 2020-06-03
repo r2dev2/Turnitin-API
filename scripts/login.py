@@ -34,14 +34,15 @@ def get(s, url):
     return source
 
 
-def setCookies(s, url):
+def getCookies(s, url):
     s.headers.update(headers)
     s.get(url)
     cookies = s.cookies.get_dict()
+    return cookies
 
 
 with requests.Session() as s:
-    setCookies(s, LOGIN_URL)
+    cookies = getCookies(s, LOGIN_URL)
     source = post(s, LOGIN_URL)
     with open("yet.html", "w+", encoding="utf-8") as fout:
         fout.write(source)
@@ -58,10 +59,9 @@ with requests.Session() as s:
     source = get(s, classes[index]["url"])
     with open("yet.html", "w+", encoding="utf-8") as fout:
         fout.write(source)
-    
+
     table = get_assignment_table(source)
     print(get_assignment_title(table[3]))
     print(get_info(table[3]))
     print(get_dates(table[3]))
     print(get_submission_link(table[3]))
-
