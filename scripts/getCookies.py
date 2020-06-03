@@ -2,23 +2,31 @@ import requests
 
 import personal
 
-LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
+LOGIN_URL = "https://api.turnitin.com/login_page.asp?lang=en_us"
 payload = personal.payload
 
 with requests.Session() as s:
     s.get(LOGIN_URL)
     cookies = s.cookies.get_dict()
-    cookies["XSRF-TOKEN"] = "eyJpdiI6InhkaUVURWZ5RXRjM0d1NVArSTg5RWc9PSIsInZhbHVlIjoiazE5S1BOait3UFV4bGpHbFwvUmtXVmd3V0h0SlVHMVhleis4dm5qeEhsN0JQeWZ5QlBONFkzODQ2SWlXZE1vcG1WM1ozVlJnVUtteEwrU3Z3bU9ySlBRPT0iLCJtYWMiOiJhZjRiYjg4MmNjMGEzN2U4ZDllODQ1ZWU4YzM2OTU5YmE1YjllNWRlOGFiMDY4YmEyZTI5MGU1ZjJhOTI3ZmI5In0="
-    cookies["laravel_session"] = cookies["XSRF-TOKEN"]
     print(cookies)
-    # s.post(LOGIN_URL, data=payload.encode("utf-8"), cookies=cookies)
     r = s.post(
         LOGIN_URL,
         headers={
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+            "sec-ch-ua": "\"Chromium\";v=\"85\", \"\\\\Not;A\\\"Brand\";v=\"99\", \"Microsoft Edge\";v=\"85\"",
+            "content-type": "application/x-www-form-urlencoded",
             "referer": LOGIN_URL,
+            "referrer": LOGIN_URL,
+            "referrerPolicy": "no-referrer-when-downgrade",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "upgrade-insecure-requests": "1"
         },
         data=payload.encode("utf-8")
     )
+    print(payload)
     # r = s.get("https://www.turnitin.com/s_home.asp", cookies=cookies)
     with open("yet.html", 'w+') as fout:
         fout.write(r.content.decode("utf-8"))
