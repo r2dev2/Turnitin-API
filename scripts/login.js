@@ -2,7 +2,6 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const personal = require('./personal.js');
 const parse = require('node-html-parser').parse;
-const he = require('he');
 /*
     Must have a personal.js in the scripts directory.
     Example:
@@ -39,7 +38,7 @@ fetch("https://api.turnitin.com/login_page.asp?lang=en_us", {
                 return;
             }
             link = {
-                title: he.decode(link.innerHTML),
+                title: link.attributes.title,
                 url: link.attributes.href
             };
             console.log(link);

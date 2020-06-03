@@ -4,7 +4,6 @@
   "description": "",
   "main": "login.js",
   "dependencies": {
-    "he": "^1.2.0",
     "node-fetch": "^2.6.0",
     "node-html-parser": "^1.2.18"
   },
