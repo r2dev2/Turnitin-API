@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 import personal
 
-LOGIN_URL = "https://api.turnitin.com/login_page.asp?lang=en_us"
+LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
 headers={
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
@@ -35,10 +35,11 @@ with requests.Session() as s:
     classes = soup.find_all("td", {"class": "class_name"})
     for i in range(len(classes)):
         e = classes[i].find("a")
-        classes[i] = {"title": e["title"], "url": f"https://turnitin.com/{e['href']}"}
+        classes[i] = {"title": e["title"], "url": f"https://www.turnitin.com/{e['href']}"}
         print(classes[i])
 
-    r = s.get(HOMEPAGE)
+    print(classes[0]["url"])
+    r = s.get(classes[0]["url"])
     with open("yet.html", 'w+') as fout:
         fout.write(r.content.decode("utf-8"))
 
