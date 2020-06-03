@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import personal
-from parser import *
+from htmlparser import *
 
 LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
