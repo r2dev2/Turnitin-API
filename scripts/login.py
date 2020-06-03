@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import personal
+from parser import *
 
 LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
@@ -57,3 +58,10 @@ with requests.Session() as s:
     source = get(s, classes[index]["url"])
     with open("yet.html", "w+", encoding="utf-8") as fout:
         fout.write(source)
+    
+    table = get_assignment_table(source)
+    print(get_assignment_title(table[3]))
+    print(get_info(table[3]))
+    print(get_dates(table[3]))
+    print(get_submission_link(table[3]))
+
