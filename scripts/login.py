@@ -18,7 +18,7 @@ headers={
     "sec-fetch-user": "?1",
     "upgrade-insecure-requests": "1"
 }
-payload = personal.payload
+payload = f"javascript_enabled=0&email={personal.email}&user_password={personal.password}&submit=Log+in"
 
 with requests.Session() as s:
     s.headers.update(headers)
@@ -29,13 +29,17 @@ with requests.Session() as s:
         data=payload.encode("utf-8")
     )
     source = r.content.decode("utf-8")
-    with open("yet.html", 'w+') as fout:
+    with open("yet.html", "w+", encoding="utf-8") as fout:
         fout.write(source)
     soup = BeautifulSoup(source, "html.parser")
     classes = soup.find_all("td", {"class": "class_name"})
-    for e in (c.find('a') for c in classes):
-        print(f"{e['title']}\nhttps://turnitin.com/{e['href']}\n")
+    for i in range(len(classes)):
+        e = classes[i].find("a")
+        classes[i] = {"title": e["title"], "url": f"https://turnitin.com/{e['href']}"}
+        print(classes[i])
+
     r = s.get(HOMEPAGE)
     with open("yet.html", 'w+') as fout:
         fout.write(r.content.decode("utf-8"))
+
 
