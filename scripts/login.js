@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const personal = require('./personal.js');
+const parse = require('node-html-parser').parse;
+const he = require('he');
 /*
     Must have a personal.js in the scripts directory.
     Example:
@@ -29,7 +31,18 @@ fetch("https://api.turnitin.com/login_page.asp?lang=en_us", {
     "credentials": "include"
 }).then(response => {
     return response.text().then(text => {
-        fs.writeFileSync("../yet.html", text);
-        console.log("Success");
+        const document = parse(text);
+        const classes = document.querySelectorAll(".class_name");
+        classes.forEach(link => {
+            link = link.querySelectorAll("a")[0];
+            if (link == null || link.innerHTML == null || link.attributes.href == null) {
+                return;
+            }
+            link = {
+                title: he.decode(link.innerHTML),
+                url: link.attributes.href
+            };
+            console.log(link);
+        });
     });
 });
