@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import personal
 
 LOGIN_URL = "https://api.turnitin.com/login_page.asp?lang=en_us"
-payload = personal.payload
+payload = f"javascript_enabled=0&email={personal.email}&user_password={personal.password}&submit=Log+in"
 
 with requests.Session() as s:
     s.get(LOGIN_URL)
@@ -13,7 +13,7 @@ with requests.Session() as s:
         LOGIN_URL,
         headers={
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            "sec-ch-ua": "\"Chromium\";v=\"85\", \"\\\\Not;A\\\"Brand\";v=\"99\", \"Microsoft Edge\";v=\"85\"",
+            "sec-ch-ua": '"Chromium";v="85", "\\\\Not;A\\"Brand";v="99", "Microsoft Edge";v="85"',
             "content-type": "application/x-www-form-urlencoded",
             "referer": LOGIN_URL,
             "referrer": LOGIN_URL,
@@ -22,15 +22,16 @@ with requests.Session() as s:
             "sec-fetch-mode": "navigate",
             "sec-fetch-site": "same-origin",
             "sec-fetch-user": "?1",
-            "upgrade-insecure-requests": "1"
+            "upgrade-insecure-requests": "1",
         },
-        data=payload.encode("utf-8")
+        data=payload.encode("utf-8"),
     )
     source = r.content.decode("utf-8")
-    with open("yet.html", 'w+') as fout:
+    with open("yet.html", "w+", encoding="utf-8") as fout:
         fout.write(source)
     soup = BeautifulSoup(source, "html.parser")
     classes = soup.find_all("td", {"class": "class_name"})
-    for e in (c.find('a') for c in classes):
-        print(f"{e['title']}\nhttps://turnitin.com/{e['href']}\n")
-
+    for i in range(len(classes)):
+        e = classes[i].find("a")
+        classes[i] = {"title": e["title"], "url": f"https://turnitin.com/{e['href']}"}
+        print(classes[i])
