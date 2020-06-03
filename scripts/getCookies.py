@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 
 import personal
 
@@ -8,7 +9,6 @@ payload = personal.payload
 with requests.Session() as s:
     s.get(LOGIN_URL)
     cookies = s.cookies.get_dict()
-    print(cookies)
     r = s.post(
         LOGIN_URL,
         headers={
@@ -26,7 +26,11 @@ with requests.Session() as s:
         },
         data=payload.encode("utf-8")
     )
-    print(payload)
-    # r = s.get("https://www.turnitin.com/s_home.asp", cookies=cookies)
+    source = r.content.decode("utf-8")
     with open("yet.html", 'w+') as fout:
-        fout.write(r.content.decode("utf-8"))
+        fout.write(source)
+    soup = BeautifulSoup(source, "html.parser")
+    classes = soup.find_all("td", {"class": "class_name"})
+    for e in (c.find('a') for c in classes):
+        print(f"{e['title']}\nhttps://turnitin.com/{e['href']}\n")
+
