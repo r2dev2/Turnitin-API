@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.js",
+  "dependencies": {
+    "he": "^1.2.0",
+    "node-fetch": "^2.6.0",
+    "node-html-parser": "^1.2.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
