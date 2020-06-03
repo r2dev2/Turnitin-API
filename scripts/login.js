@@ -5,8 +5,7 @@ const personal = require('./personal.js');
     Must have a personal.js in the scripts directory.
     Example:
 
-        module.exports.username = "email";
-        module.exports.password = "password";
+        module.exports = { username: "email", password: "password" };
 */
 fetch("https://api.turnitin.com/login_page.asp?lang=en_us", {
     "headers": {
@@ -24,7 +23,7 @@ fetch("https://api.turnitin.com/login_page.asp?lang=en_us", {
     },
     "referrer": "https://api.turnitin.com/login_page.asp?lang=en_us",
     "referrerPolicy": "no-referrer-when-downgrade",
-    "body": `javascript_enabled=0&email=${personal.email}&user_password=${personal.password}&submit=Log+in`,
+    "body": `javascript_enabled=0&email=${personal.username}&user_password=${personal.password}&submit=Log+in`,
     "method": "POST",
     "mode": "cors",
     "credentials": "include"
