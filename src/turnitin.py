@@ -16,41 +16,97 @@ __HEADERS = {
     "sec-fetch-user": "?1",
     "upgrade-insecure-requests": "1",
 }
-__session = None
 
 
 def login(email, password):
-    global __session
+    s = __newSession()
     payload = f"javascript_enabled=0&email={email}&user_password={password}&submit=Log+in".encode(
         "utf-8"
     )
-    __session = requests.Session()
-    cookies = __getCookies(__LOGIN_URL)
-    __setCookies(cookies)
-    with open("dashboard.html", "w+", encoding="utf-8") as fout:
-        fout.write(__post(__LOGIN_URL, payload))
+    cookies = __getCookies(s, __LOGIN_URL)
+    __setCookies(s, cookies)
+    __post(s, __LOGIN_URL, payload)
+    return cookies.get_dict()
 
 
-def __resetHeaders():
-    __session.headers.update(__HEADERS)
+def getClasses(cookies):
+    s = __newSession()
+    __setCookies(s, cookies)
+    source = __get(s, __HOMEPAGE)
+    classes = __parseDashboard(source)
+    return classes
 
 
-def __post(url, payload):
-    __resetHeaders()
-    return __session.post(url, data=payload).content.decode("utf-8")
+def __newSession():
+    return requests.Session()
 
 
-def __get(url):
-    __resetHeaders()
-    return __session.get(url).content.decode("utf-8")
+def __parseDashboard(source):
+    soup = BeautifulSoup(source, "html.parser")
+    classes = soup.find_all("td", {"class": "class_name"})
+    for i in range(len(classes)):
+        e = classes[i].find("a")
+        classes[i] = {
+            "title": e["title"],
+            "url": f"https://www.turnitin.com/{e['href']}",
+        }
+    return classes
 
 
-def __getCookies(url):
-    __session.get(url)
-    cookies = __session.cookies
+def __resetHeaders(s):
+    s.headers.update(__HEADERS)
+
+
+def __post(s, url, payload):
+    __resetHeaders(s)
+    return s.post(url, data=payload).content.decode("utf-8")
+
+
+def __get(s, url):
+    __resetHeaders(s)
+    return s.get(url).content.decode("utf-8")
+
+
+def __getCookies(s, url):
+    s.get(url)
+    cookies = s.cookies
     return cookies
 
 
-def __setCookies(cookies):
-    __session.cookies.update(cookies)
+def __setCookies(s, cookies):
+    s.cookies.update(cookies)
 
+
+def __getAssignmentTitle(e):
+    return e.find("td", {"class": "title"}).find("div").text
+
+
+def __getAssignmentInfo(e):
+    return e.find("td", {"class": "info"}).find("button").find("div").text
+
+
+def __getAssignmentDate(e):
+    raw_dates = e.find_all("td")[2].find("div").find_all("div", {"class": "tooltip"})
+    return {
+        "Start": {
+            "Date": raw_dates[0].find("div", {"class": "date start-date"}).text,
+            "Time": raw_dates[0].find("div", {"class": "time start-time"}).text,
+        },
+        "Due": {
+            "Date": raw_dates[1].find("div", {"class": "date due-date"}).text,
+            "Time": raw_dates[1].find("div", {"class": "time due-time"}).text,
+        },
+        "Post": {
+            "Date": raw_dates[2].find("div", {"class": "date post-date"}).text,
+            "Time": raw_dates[2].find("div", {"class": "time post-time"}).text,
+        },
+    }
+
+
+def __getSubmissionLink(e):
+    return e.find("td", {"class": "action-buttons"}).find("a")["href"]
+
+
+def __getAssignmentTable(html):
+    soup = BeautifulSoup(html, "html.parser")
+    return soup.find_all("tr", {"class": "Paper"})
