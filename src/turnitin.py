@@ -106,7 +106,7 @@ def __convertDate(raw):
     date = raw.find("div", {"class": "date"}).text
     time = raw.find("div", {"class": "time"}).text
     dateObject = datetime.strptime(date + " " + time, "%d-%b-%Y %I:%M%p")
-    return dateObject.strftime("%m-%d-%Y %H:%M:%S")
+    return dateObject.strftime("%m/%d/%Y %H:%M:%S")
 
 
 def __getAssignmentDate(e):
