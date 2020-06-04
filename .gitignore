@@ -1,5 +1,4 @@
 personal.py
-*.html
 **/node_modules/*
 personal.js
 __pycache__/

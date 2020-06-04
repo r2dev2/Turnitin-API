@@ -25,21 +25,10 @@ def getAssignments():
     return jsonify(turnitin.getAssignments(data["url"], data["auth"]))
 
 
+@app.route("/")
+def index():
+    return app.send_static_file("index.html")
+
+
 if __name__ == "__main__":
     app.run()
-
-"""
-Client side js, run in the browser:
-fetch("login", {
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    "body": JSON.stringify({email:email, password: password}),
-    "method": "POST"
-}).then(response=>{
-    response.json().then(json=>{
-        console.log(json);
-    });
-});
-"""

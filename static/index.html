@@ -1,0 +1,15 @@
+Example:
+<pre>
+fetch("login", {
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    "body": JSON.stringify({email: email, password: password}),
+    "method": "POST"
+}).then(response=>{
+    return response.json();
+}).then(json=>{
+    console.log(json);
+});
+</pre>
