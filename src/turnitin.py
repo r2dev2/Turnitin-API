@@ -37,6 +37,22 @@ def getClasses(cookies):
     return classes
 
 
+def getAssignments(url, cookies):
+    s = __newSession()
+    __setCookies(s, cookies)
+    source = __get(s, url)
+    table = __getAssignmentTable(source)
+    return [
+        {
+            "title": __getAssignmentTitle(assignment),
+            "info": __getAssignmentInfo(assignment),
+            "dates": __getAssignmentDate(assignment),
+            "submission": __getSubmissionLink(assignment),
+        }
+        for assignment in table
+    ]
+
+
 def __newSession():
     return requests.Session()
 
