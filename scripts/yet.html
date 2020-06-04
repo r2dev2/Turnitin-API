@@ -1,0 +1,3346 @@
+
+	
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>  <html lang="en-us" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="en-us" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="en-us" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="en-us" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="en-us"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en-us">             <!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+	<title>Turnitin - Class Portfolio</title>
+
+<script type="text/javascript">
+    window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,N=y.hash,this[u]=g.now()}function o(){M--,y.hash!==N&&i(0,!0);var t=g.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=g.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,g=t("loader");if(w[v]&&g.xhrWrappable){var b=t(10),x=t(11),E=t(8),O=t(6),P=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),S=j.get("tracer");t(15),g.features.spa=!0;var N,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(l,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),P.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),R.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),b.buffer([u]),x.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+s),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(8);var b=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,e){var n=t[0];n instanceof b&&i("bst",[n,e,this.bstStart,g.now()])}),a.on(m,function(t,e,n){this.bstStart=g.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(24)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(21);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(24)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(24)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-"),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(24)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(24),a=t("ee").get("promise"),s=i(a),c=t(21),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(24)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(24)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(24)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,b),b.prototype=l.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(e.cat=c.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),l=t(19),h=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,l&&(l>34||l<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<d;s++)e.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],24:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[n]];return d&&d.push([b,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},b={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(g,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+x.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(17),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}]},{},["loader",2,15,5,3,4]);
+    ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"56a7605095",applicationID:"282479739",sa:1}
+</script>
+
+<script type="text/javascript">
+
+    window.getQueryParam = function (name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.search);
+        return (results !== null) ? results[1] || 0 : false;
+    };
+
+    var environment = 'development';
+    if (window.location.hostname.indexOf('sandbox') !== -1) {
+        environment = 'sandbox';
+    } else if (window.location.hostname.indexOf('sprint') !== -1) {
+        environment = 'sprint';
+    } else if (window.location.hostname.indexOf('turnitinuk.com') !== -1) {
+        environment = 'production_uk';
+    } else if (window.location.hostname.indexOf('turnitin.com') !== -1) {
+        environment = 'production';
+    }
+
+    window.addNewRelicEvent = function (name, attributes = {}) {
+
+        // Set some global attributes to apply to all NR events
+        attributes.environment = environment;
+        attributes.language = window.getQueryParam('lang');
+
+        newrelic.addPageAction(name, attributes);
+    };
+
+</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MKRDZM');</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" type="text/css" href="/r/build/css/tii/2ba0f5af7e33c163e03e3f3fc9098f3bcb_jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/r/build/lesscss/019f7416317cc77fc15c8931e6f417cdcb_tii_styles.css" media="all" />
+
+
+<script type="text/javascript" src="/r/build/jsloc/80779469630823f96cbcc37f87d9f353cb_en_us.js"></script>
+<script>
+    var curr_lang = 'en_us';
+</script>
+
+
+<script type="text/javascript" src="/r/build/js/tii/58a737419c40bd4123069fee027f724fcb_tii_core.js"></script>
+<script type="text/javascript" src="/r/build/lesscss/4ff99d8057e2f32f94328a49b0e9a62acb_bootstrap.js"></script>
+
+
+
+<script type="text/javascript">
+    // ESTABLISH TII GLOBAL VALUES
+    Tii.cms.global.randomNumber = 0.519132511659507;
+    Tii.cms.global.serverID = '41';
+    Tii.cms.global.sessionID = 'f865859c2ac4a1c07bbfbf3279e623b0';
+    Tii.cms.global.cookieSession = '1';
+    Tii.cms.global.lang = 'en_us';
+    Tii.cms.global.useEV = '';
+    Tii.cms.global.evBaseUrl = 'https://ev.turnitin.com/auth/ev/73e71526db827c7a705db44fa4e22c4f909bca9f0661cf05ada059d9103c3a83';
+    Tii.cms.global.userOptedOutEVBeta = false;
+</script>
+
+
+	<!--	Popup the warning dialog after $timeout_ms ms.	-->
+	<script type="text/javascript">
+    	var application_open = false;
+    	var the_timeout, the_logout, timeoutDialog;
+
+	    YAHOO.util.Event.onDOMReady(function() {
+            timeoutDialog = new YAHOO.widget.Panel('timeoutDialog', {
+                width: '500px',
+                fixedcenter: true,
+                draggable: false,
+                close: false,
+                modal: true,
+                underlay: 'none',
+                visible: false
+            });
+
+            var extendTimerButton = new YAHOO.widget.Button('extend-timer');
+
+            YAHOO.util.Event.addListener('extend-timer-button', 'click', function(e) {
+                YAHOO.util.Event.preventDefault(e);
+                restartTimer();
+                timeoutDialog.hide();
+                YAHOO.util.Connect.initHeader('X-Palladium', '1');
+                YAHOO.util.Connect.asyncRequest('GET', '/session/renew_session?lang=en_us');
+            });
+
+            timeoutDialog.render();
+    		the_timeout = setTimeout('executeTimer();', 10740000);
+    	});
+
+		function executeTimer() {
+		    if(application_open){return;}
+
+            // when the timer fires, need to check if the user really has been
+            // inactive for the entire timeout. If so, show the dialog
+
+            var success = function(o) {
+                var response = o.responseText;
+
+                if (response) {
+                    var inactiveDuration = parseInt(response);
+
+                    var timeoutSec = 10740000 / 1000;
+
+                    if ( isNaN(inactiveDuration) || (inactiveDuration >= timeoutSec) ) {
+                        // the inactive duration is not readable, or if it's
+                        // beyond the time out, then show the dialog
+                        showDialog();
+                    }
+                    else {
+                        // don't show the dialog but extend the timer, if the user has
+                        // not been inactive
+
+                        var remainingMs = 10740000;
+
+                        if (!isNaN(inactiveDuration)) {
+                            remainingMs = ( timeoutSec - inactiveDuration ) * 1000;
+                        }
+
+                        the_timeout = setTimeout('executeTimer();', remainingMs);
+                    }
+                }
+                else {
+                    showDialog();
+                }
+            };
+
+            var failure = function(o) {
+                // if the check call fails, just show the extend dialog
+                showDialog();
+            };
+
+            var callback = {
+                success: success,
+                failure: failure
+            };
+
+            // send the request
+            YAHOO.util.Connect.initHeader('X-Palladium', '1');
+            YAHOO.util.Connect.asyncRequest('GET', '/session/inactive_duration?lang=en_us', callback);
+        }
+
+        function showDialog() {
+            timeoutDialog.show();
+            window.focus();
+            the_logout = setTimeout('logout()', 30000);
+        }
+
+		function logout_main() {
+			self.location="/logout.asp?session-id=f865859c2ac4a1c07bbfbf3279e623b0&svr=41&src=0";
+		}
+
+		function restartTimer() {
+            application_open = false;
+            stopTimer();
+            the_timeout = setTimeout('executeTimer();', 10740000);
+        }
+
+        function stopTimer() {
+            if (the_timeout) {
+                clearTimeout(the_timeout);
+            }
+            if (the_logout) {
+                clearTimeout(the_logout);
+            }
+        }
+
+    	function logout() {
+            if (window.gm_window) {
+                try {
+                    window.gm_window.IP.util.Logger.logInfo('Session timed out by JS with GM open');
+                }
+                catch(e) {
+                }
+            }
+    		window.logout_main();
+    	}
+
+
+		function display_readonly_alert() {
+			alert('This feature is no longer available because this class has expired and has become read-only. If you would like to extend the expiration date of this class, please return to your class home page and click on the \'edit\' button for this class.');
+		}
+
+		function display_inactive_alert() {
+			alert('This class is inactive and no longer accessible.');
+		}
+
+		function display_a_readonly_alert() {
+			alert('This feature is no longer available because this account has become read-only. For more information, please contact your account administrator.');
+		}
+
+		function display_a_inactive_alert() {
+			alert('This feature is no longer available because this account is inactive. For more information, please contact your account administrator.');
+		}
+
+		function display_s_readonly_alert() {
+			alert('This feature is no longer available because this class has expired and has become read-only. For more information, please contact your instructor.');
+		}
+
+		function display_s_inactive_alert() {
+			alert('This feature is no longer available because this class has expired and is now inactive. For more information, please contact your instructor.');
+		}
+
+        YAHOO.util.Event.onDOMReady(function () {
+            if($("account_sections")){
+                var oMenuBar = new YAHOO.widget.MenuBar("account_sections", {
+                                                            autosubmenudisplay: true,
+                                                            hidedelay: 750,
+                                                            lazyload: true });
+                oMenuBar.render();
+            }
+
+            var ss = new StylesheetSwitcher([
+                {
+                    name: 'normal',
+                    link: '',
+                    element: document.getElementByHandle('normal'),
+                    selected: true
+                },
+                {
+                    name: 'smaller',
+                    link: "/r/build/css/tii/46b1b01ff6727f042568a57157077190cb_tii_cms_small_text.css",
+                    element: document.getElementByHandle('smaller')
+                },
+                {
+                    name: 'bigger',
+                    link: "/r/build/css/tii/033627184bcb1a28b9a846c4b32cb7a8cb_tii_cms_large_text.css",
+                    element: document.getElementByHandle('bigger')
+                }
+            ], '/cms_requests.asp', '41');
+
+
+            // initialize jump menu buttons
+            var jumpButtonElements = document.getElementsByHandle('jump_menu_button', '', 'INPUT');
+            for(var i = 0; i < jumpButtonElements.length; i++) {
+                var jumpButton = jumpButtonElements[i];
+
+                var menuElement = document.getElementByHandle('jump_menu_options', jumpButton.parentNode, 'SELECT');
+
+                var button = new YAHOO.widget.Button(jumpButton, {
+                    type: "menu",
+                    menu: menuElement
+                });
+            }
+
+            // initialize message showing/hiding
+            var closeButtons = document.getElementsByHandle('close',  '', 'a');
+
+            if (closeButtons.length > 0) {
+                var hideMessage = function(e) {
+                var closeButton = $E.getTarget(e);
+
+                var attributes = {
+                    opacity: { to: 0 },
+                    height: {to: 0},
+                    padding: {to: 0}
+                };
+                var anim = new YAHOO.util.Anim(closeButton.parentNode, attributes, 1, YAHOO.util.Easing.easeOut);
+                anim.onComplete.subscribe(function(){
+                    closeButton.parentNode.style.display = 'none';
+                })
+                anim.animate();
+
+                $E.stopEvent(e);
+                }
+                $E.on(closeButtons, 'click', hideMessage);
+            }
+
+        });
+
+        function hide_msg(accountid) {
+            var callback = {
+            	success:function(o) {
+            	},
+            	failure:function(o) {
+            	    alert('could not save preference');
+            	}
+            };
+
+            YAHOO.util.Connect.asyncRequest('GET', '/cms_requests.asp?svr=41&msg_to_hide=' + accountid, callback);
+        }
+
+        function hide_tip(tipid) {
+            var callback = {
+            	success:function(o) {
+            	},
+            	failure:function(o) {
+            	}
+            };
+
+            YAHOO.util.Connect.asyncRequest('GET', '/cms_requests.asp?svr=41&tip_to_hide=' + tipid, callback);
+        }
+
+        function setAriaExpanded(id, value) {
+            document.getElementById(id).setAttribute('aria-expanded', value);
+        }
+        
+        var mutationObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === "attributes" && mutation.attributeName === "class") {
+                    var target;
+                    var expanded;
+                    if (mutation.target.id === 'submit_type_span') {
+                        target = 'submit_type';
+                        expanded = /(.)*open(.)*/.test(mutation.target.classList) ? "true" : "false";
+                    } else if (/write_review_(.)*/.test(mutation.target.id)) {
+                        target = mutation.target.id;
+                        expanded = /(.)*popover-trigger(.)*/.test(mutation.target.classList) ? "true" : "false";
+                    } else if (mutation.target.id === 'current_user_type') {
+                        target = 'current_user_type-button';
+                        expanded = /(.)*yui-menu-button-active(.)*/.test(mutation.target.classList) ? "true" : "false";
+                    } else if (mutation.target.id === 'lang_submit') {
+                        target = 'lang_submit-button';
+                        expanded = /(.)*yui-menu-button-active(.)*/.test(mutation.target.classList) ? "true" : "false";
+                    } else {
+                        return; // so nothing else's aria-expanded value gets set
+                    }
+                    setAriaExpanded(target, expanded);
+                }
+            });
+        });
+
+        function createEnterSpaceListener(button_id, callback) {
+            return function(event) {
+                var keyCode = event.which || event.keyCode;    // cross-browser support
+                if (keyCode === 13 || keyCode === 32) {        // 13 is enter, 32 is space
+                    callback(button_id);
+                }
+            };
+        }
+
+        function createEscListener(button_id, closeFunction) {
+            return function(event) {
+                var keyCode = event.which || event.keyCode;    // cross-browser support
+                if (keyCode === 27) {                          // escape button
+                    closeFunction(button_id);
+                }
+            };
+        }
+
+        function createPRNavLinks(prev_link_id, next_link_id) {
+            return function(event) {
+                var keyCode = event.which || event.keyCode;                                         // cross-browser support
+                if (keyCode === 39 || keyCode === 40 || (!event.shiftKey && keyCode == 9) ) {       // right (38), down(40), or tab (no shift, 9)
+                    event.preventDefault();
+                    document.getElementById(next_link_id).focus();
+                } else if (keyCode === 37 || keyCode === 38 || (event.shiftKey && keyCode == 9)) {  // left (37), up(38), or shift+tab
+                    event.preventDefault();
+                    document.getElementById(prev_link_id).focus();
+                }
+            };
+        }
+
+        /**
+        * Purpose: Initializes tooltips for the entire page. See https://sites.google.com/a/iparadigms.com/feds/site-documentation/tii/tip-tip-tooltips for usage.
+        * Returns: nothing
+        */
+        jQuery(function(){
+
+            // initialize all elements with the tooltip classname
+            jQuery(".tooltip").tipTip({
+                defaultPosition: 'top',
+                delay: 500,
+                maxWidth: '500px',
+                edgeOffset: 6
+            });
+        });
+        jQuery(function() {
+            window.onload = function() {
+                // Hack for IE8 to show full width of student dropdown box
+                if ( jQuery.browser.msie && jQuery.browser.version == '8.0' ) {
+                   jQuery(".ip_forms SELECT").css("width", "auto");
+                }
+
+                // set proper attributes for accessibility
+                var userButton = document.getElementById('current_user_type-button');
+                if (typeof userButton !== 'undefined') {
+                    userButton.setAttribute('aria-haspopup', 'true');
+                    userButton.setAttribute('aria-expanded', 'false');
+                    userButton.setAttribute('aria-controls', 'menu_user_type');
+                }
+                var langButton = document.getElementById('lang_submit-button');
+                if (typeof langButton !== 'undefined') {
+                    langButton.setAttribute('aria-haspopup', 'true');
+                    langButton.setAttribute('aria-expanded', 'false');
+                    langButton.setAttribute('aria-controls', 'menu_language');
+                }
+                document.getElementsByClassName('first-of-type')
+                    .filter( item => item.tagName=="UL" )
+                    .forEach(function(ul) {
+                        ul.setAttribute('role','menu');
+                        ul.setAttribute('tabindex','-1');
+                    });
+                document.getElementsByClassName('yuimenuitem').forEach(li => li.setAttribute('role', 'none'));
+                document.getElementsByClassName('yuimenuitemlabel').forEach(function(a) {
+                    a.setAttribute('role', 'menuitem');
+                    a.setAttribute('tabindex', '-1');
+                });
+                // use observer for these two buttons because they can be toggled without clicking
+                mutationObserver.observe(document.getElementById('current_user_type'), {attributes: true});
+                mutationObserver.observe(document.getElementById('lang_submit'), {attributes: true});
+                try {
+                    mutationObserver.observe(document.getElementById('submit_type_span'), {attributes:true});
+                } catch (err) {
+                    // this case will happen when not on the submission page.
+                }
+
+                var i;
+                var button;
+                var downloadButtons = document.getElementsByTagName('button');
+                for (i=0; i<downloadButtons.length; i++) {
+                    button = downloadButtons[i];
+                    if (/download_btn_(.)*/.test(button.id)) {
+                        button.addEventListener("keypress", createEnterSpaceListener(button.id, setDownloadButtonAriaExpanded));
+                        button.addEventListener("keyup", createEscListener(button.id, closeDownloadButtonMenu));     // escape key needs keyup event
+                    }
+                }
+
+                // observers and listeners for peermark review buttons
+                var reviewButtons = document.getElementsByClassName('review_btn');
+                for (i=0; i<reviewButtons.length; i++) {
+                    button = reviewButtons[i];
+                    mutationObserver.observe(button, {attributes: true});
+
+                    button.addEventListener("keypress", createEnterSpaceListener(button.id, setReviewMenuAriaExpanded));
+                    button.addEventListener("keyup", createEscListener(button.id, closeReviewMenu));
+                }
+            };
+        });
+    </script>
+
+
+<link rel="stylesheet" type="text/css" href="/r/build/css/tii/78129f3b29885ebce77353eead549945cb_dynamic_styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/r/build/css/tii/88ee4ccd3555f2b759921fb5d58d83e5cb_container.css" media="all" />
+
+
+
+
+<script type="text/javascript" src="/r/build/js/tii/8b608684a5f4aec1b540987c93498c01cb_tii_anonymous_marking.js"></script>
+
+
+</head>
+<body id="tii_cms" >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKRDZM"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="skip">
+<a href="#main_section">Skip to Main Content</a>
+</div>
+
+<div id="wrapper">
+
+
+
+		
+
+<div id="topline"></div>
+<div id="top_nav_wrap">
+
+    <span id="top_nav">
+
+    <!-- Welcome & Language & Help-->
+        <span dir="LTR">
+            <a alt="User Info" class="user_full_name" href="user_info.asp?r=25.2615108706053&svr=41&lang=en_us&">Ronak Badhe</a>
+            <span class="divider"> | </span>
+            <a alt="User Info" href="user_info.asp?r=25.2615108706053&svr=41&lang=en_us&">User Info</a>
+        </span>
+
+        <span class="divider"> | </span>
+
+        <span dir="LTR"><a href="announcements.asp?r=25.2615108706053&svr=41&lang=en_us&">Messages (1 new)</a></span>
+
+        <span class="divider"> | </span>
+
+        <!-- Logged in as -->
+
+        <input id="current_user_type" type="button" style="display:none;" value="Student" />
+        <div id="user_type_menu" style="display:none;">
+            <div class="bd">
+                <ul class="first-of-type">
+                    
+                    
+                    <li class="yuimenuitem">
+                        <a class="yuimenuitemlabel" href="user_type.asp?r=25.2615108706053&svr=41&lang=en_us&ut=t">Instructor</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- Select User Type -->
+
+        <span class="divider"> | </span>
+
+        
+        <span id="lang_span" dir="LTR">
+            <form id="lang_form" method='post' action="lang_update.asp?r=25.2615108706053&svr=41&lang=en_us&" accept-charset="utf-8">
+                <input value="Change Language" type="submit" id="lang_submit" name="lang_submit" tabindex="0" />
+                <select id="lang_select" name="lang_select" title="Select Language" style="display:none;">
+                    
+                    
+                    <option value="en_us" selected="selected">English</option>
+                    
+                    
+                    
+                    <option value="en_int">English (International)</option>
+                    
+                    
+                    
+                    <option value="cs">Čeština</option>
+                    
+                    
+                    
+                    <option value="de">Deutsch</option>
+                    
+                    
+                    
+                    <option value="es">Español</option>
+                    
+                    
+                    
+                    <option value="fr">Français</option>
+                    
+                    
+                    
+                    <option value="it">Italiano</option>
+                    
+                    
+                    
+                    <option value="nl">Nederlands</option>
+                    
+                    
+                    
+                    <option value="pl">Polski</option>
+                    
+                    
+                    
+                    <option value="pt_br">Português</option>
+                    
+                    
+                    
+                    <option value="ro">Română</option>
+                    
+                    
+                    
+                    <option value="fi">Suomi</option>
+                    
+                    
+                    
+                    <option value="sv">Svenska</option>
+                    
+                    
+                    
+                    <option value="vi">Tiếng việt</option>
+                    
+                    
+                    
+                    <option value="tr">Türkçe</option>
+                    
+                    
+                    
+                    <option value="zh_hans">简体中文</option>
+                    
+                    
+                    
+                    <option value="zh_tw">繁體中文</option>
+                    
+                    
+                    
+                    <option value="ja">日本語</option>
+                    
+                    
+                    
+                    <option value="ko">한국어</option>
+                    
+                    
+                    
+                    <option value="ru">Русский</option>
+                    
+                    
+                    
+                    <option value="ar">عربي</option>
+                    
+                    
+                </select>
+            </form>
+        </span>
+
+        <span class="divider"> |</span>
+        
+
+
+        
+
+        <span id="help-tab" dir="LTR"><a tabindex="0"
+        
+            target="_blank" href="https://help.turnitin.com/feedback-studio/integrations.htm"
+        
+        >Help</a></span>
+
+        <span class="divider"> | </span>
+
+        
+
+        <span dir="LTR"><a tabindex="0" href="logout.asp?r=25.2615108706053&svr=41&lang=en_us&">Logout</a></span>
+    </span>
+
+</div>
+
+<script type="text/javascript">
+    jQuery.noConflict(); // jQuery must play nicely
+    function initPageSelect() {
+        var userTypeMenu = new YAHOO.widget.Menu('user_type_menu', {
+            context: ['current_user_type', 'tl', 'bl', ['windowResize']],
+            shadow: false
+        });
+        userTypeMenu.render();
+
+        var userTypeButton = new YAHOO.widget.Button('current_user_type', {
+            type: 'menu',
+            menu: userTypeMenu,
+            shadow: false
+        });
+
+        YAHOO.util.Dom.setStyle(['current_user_type', 'user_type_menu'], 'display', '');
+
+        
+        var myMenu = YAHOO.util.Dom.get('lang_select');
+        var langMenu = new YAHOO.widget.Menu('lang_select', {
+            context: ['lang_submit', 'tl', 'bl', ['windowResize']],
+            shadow: false,
+            position: 'dynamic',
+            showdelay: 5000
+        });
+        var langMenuContainer = YAHOO.env.ua.webkit ? 'top_nav' : 'lang_form';
+        langMenu.render(langMenuContainer);
+
+        var selectedLangOptionElement = $D.getElementsBy(function(el){return el.selected}, 'OPTION', 'lang_form')[0];
+        var langSelectButton = new YAHOO.widget.Button('lang_submit', {
+            type: 'menu',
+            menu: langMenu,
+            title: 'Click to select a language',
+            label: selectedLangOptionElement.innerHTML
+        });
+
+        langSelectButton.MENUBUTTON_DEFAULT_TITLE = 'Click to select a language';
+        langSelectButton.MENUBUTTON_MENU_VISIBLE_TITLE = 'Click or press Esc to collapse';
+
+        // need to force the menu y value before showing to get the right initial value
+        langMenu.beforeShowEvent.subscribe(function() {
+            var y = YAHOO.util.Region.getRegion(langSelectButton.get('element')).bottom;
+            this.cfg.setProperty('y', y);
+        }, langMenu, true);
+
+        YAHOO.util.Dom.setStyle(['lang_submit', 'lang_select'], 'display', '');
+        
+    }
+
+    initPageSelect();
+
+</script>
+
+
+
+<!-- @@@@@@@@@@ TOP TABS @@@@@@@@@@@@ -->
+<div id="top_tabs_wrapper">
+    <div id="top_tabs">
+
+    
+    <!--
+    <ul id="stylesheet_switcher">
+        <li class="smaller"><a class="_smaller " href="cms_requests.asp?r=25.2615108706053&svr=41&lang=en_us&text_size=smaller&return=true">smaller</a></li>
+        <li class="normal"><a class="_normal selected" href="cms_requests.asp?r=25.2615108706053&svr=41&lang=en_us&text_size=normal&return=true">normal</a></li>
+        <li class="bigger"><a class="_bigger " href="cms_requests.asp?r=25.2615108706053&svr=41&lang=en_us&text_size=bigger&return=true">bigger</a></li>
+    </ul>-->
+
+    
+        
+            
+                <a tabindex="-1" href="/s_home.asp?r=25.2615108706053&svr=41&lang=en_us&"><h1><span></span>Turnitin</h1></a>
+            
+        
+    
+
+    <div class="clear"></div>
+    </div>
+</div>
+
+
+
+		
+
+
+<!-- SIDE CONTENT AREA ===============================-->
+<div id="">
+
+    <!-- SUB NAVIGATION =========-->
+    <div id="tabs">
+        <ul class="">
+            
+            <li class="first_selected" aria-selected="true"><a tabindex="0" href="s_class_portfolio.asp?r=25.2615108706053&svr=41&lang=en_us&" id="left" title="Class Portfolio">Class Portfolio</a></li>
+            
+            <li aria-selected="false"><a tabindex="0" href="student_grade.asp?r=25.2615108706053&svr=41&lang=en_us&sid&#61;1076974347" title="My Grades">My Grades</a></li>
+            
+            
+            
+            
+            
+            <li aria-selected="false"><a tabindex="0" href="discuss_home.asp?r=25.2615108706053&svr=41&lang=en_us&" title="Discussion">Discussion</a></li>
+                    
+            
+            
+            
+            <li class="last" aria-selected="false"><a tabindex="0" href="calendar.asp?r=25.2615108706053&svr=41&lang=en_us&" title="Calendar">Calendar</a></li>
+            
+        </ul>
+        <div class="clear"></div>
+    </div>
+
+    <div id="main_content" class="">
+        
+        <!-- @@@@@@@@@@ BREAD CRUMBS @@@@@@@@@@@@ -->
+        <div id="bread_crumbs">
+            <h2>Now viewing:</h2> <ul><li><a href="s_home.asp?r=25.2615108706053&svr=41&lang=en_us&">Home</a><span class="breadcrumb_arrow"> &#62; </span><a href="s_class_portfolio.asp?r=25.2615108706053&svr=41&lang=en_us&cid=22123635">World Literature -- Period 4</a></li></ul>
+            <div class="clear"></div>
+        </div>
+        
+
+        <!-- URGENT ANNOUCMENT ===============================-->
+        
+
+        <!-- ERROR SAVING OR EDITING =============-->
+        
+
+        <!-- GENERAL TIPS MESSAGE ==========-->
+        
+
+        <!-- END SIDE CONTENT AREA & START MAIN CONTENT===============================-->
+
+        <div id="main_section">
+
+		<!--END CLASSHEADER, START PAGESPECIFIC-->
+<script type="text/javascript">
+    function hide_msg() {
+        var callback = {
+            success:function(o) {
+            },
+            failure:function(o) {
+                alert('could not save preference');
+            }
+        };
+
+        YAHOO.util.Connect.asyncRequest('GET', '/process_view_announcement.asp?msg_id=121', callback);
+    }
+
+    function confirm_resubmit(start_time,handler,aid){
+        
+            var yes = confirm("You have already submitted a paper to this assignment and a Similarity Report was generated for your submission. If you choose to resubmit your paper, your earlier submission will be replaced and a new report will be generated. After 3 resubmissions, you will need to wait 24 hours after a resubmission to see a new Similarity Report.");
+        
+        if (yes){
+            document.location.href = handler + "aid=" + aid + "&svr=41" + "&session-id=f865859c2ac4a1c07bbfbf3279e623b0" + "&lang=en_us";
+        }
+    }
+
+    function confirm_unsubmit( node ) {
+        var confirm_string = 'Reviews can be edited until the due date of the assignment. When editing is completed, the review will have to be resubmitted by clicking on the submit button within the review.';
+
+        /* check to see if the due date has passed while the page has been sitting here.
+           hack the assignment id out of the href and find the relevent node */
+
+        var href = node.href;
+        var a_id = href.match( /assignment\/([0-9]+)/ )[1];
+
+        var tr_node = document.getElementById( 'assignment_' + a_id );
+
+        if( !tr_node ) {
+            // ruh roh - just bail
+            return confirm ( confirm_string );
+        }
+
+        /* now look for the hidden date with the rfc2822 string */
+        var rfc2822_input = YAHOO.util.Dom.getElementsByClassName( 'rfc2822', 'input', tr_node )[0];
+
+        var due_date = new Date( rfc2822_input.value );
+
+        /* is it later than the due date? */
+        if( new Date() > due_date ) {
+            alert( 'The due date for this assignment has passed. You cannot change your review.' );
+            return false;
+        }
+
+        return confirm( confirm_string );
+    }
+
+    var closePopover;
+
+    // using jQuery global
+    jQuery(document).ready(function($) {
+        $('#student_assignment_table .peermark-btns .btn[rel=popover]').popover({
+            html: true,
+            template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><a href="#" id="close-popover" class="close-popover" onclick="closePopover(event);">&times;</a><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
+            trigger: 'manual',
+            placement: 'top'
+        }).click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('popover-trigger').popover('toggle');
+        });
+
+        $(".alert").alert();
+
+        // Closes the Bootstrap popovers
+        closePopover = function(e) {
+            e.preventDefault();
+
+            $('#student_assignment_table .popover-trigger').toggleClass('popover-trigger').popover('toggle');
+            reviewMenuButton.focus();
+        }
+
+        $('#student_assignment_table a[target=rubric_view]').click(function(e) {
+            e.preventDefault();
+            window.open(this.href, 'rubric_view', 'toolbar=0,titlebar=0,menubar=0,location=0,status=0,width=800,height=600');
+        });
+
+        // orig     onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=en_us&oid=&fn=&type=paper&p=0','_download', 'height=150,width=300,location=0,status=0,menubar=0,scrollbars=0');"
+        // pdf      onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=en_us&oid=&fn=&type=paper&p=1','_download', 'height=150,width=300,location=0,status=0,menubar=0,scrollbars=0');"
+        // receipt  onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=en_us&oid=&fn=&type=paper&p=','_download', 'height=150,width=300,location=0,status=0,menubar=0,scrollbars=0');"
+
+        var MAX_ATTEMPTS_ALLOWED = 15;
+        $.data(document.body, 'remainingAttemptsAllowed', MAX_ATTEMPTS_ALLOWED);
+        $.data(document.body, 'delaySecondsSequence', [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377 ]); // fibonacci sequence for progressively backing off
+
+        var resetDownloadStatus = function() {
+            $('#download-activity-'+$.data(document.body, 'objectId')).hide();
+            $.data(document.body, 'remainingAttemptsAllowed', MAX_ATTEMPTS_ALLOWED);
+            $.data(document.body, 'currentlyDownloading', false);
+        };
+
+        var pollDownload = function(response) {
+
+            var remainingAttemptsAllowed = $.data(document.body, 'remainingAttemptsAllowed');
+
+            var delaySeconds = $.data(document.body, 'delaySecondsSequence')[MAX_ATTEMPTS_ALLOWED - remainingAttemptsAllowed];
+
+            console.log('remaining attempts', remainingAttemptsAllowed, 'delaySeconds', delaySeconds)
+
+            $.data(document.body, 'currentlyDownloading', true);
+
+            //decrement for the next iteration
+            remainingAttemptsAllowed--;
+            $.data(document.body, 'remainingAttemptsAllowed', remainingAttemptsAllowed);
+
+            if(response.ready === 1) {
+                window.location = response.url;
+                resetDownloadStatus();
+
+            } else if(remainingAttemptsAllowed > 0) {
+
+                // keep trying
+                setTimeout(function() {
+                    $.ajax({
+                        url: $.data(document.body, 'pollUrl'),
+                        type: 'GET',
+                        success: function(response) {
+                            pollDownload(response);
+                        }
+                    });
+                }, delaySeconds * 1000 );
+
+            } else {
+                // TODO: Just throwing an alert now, but need to use .popover()
+                alert('Error: ' + 'Could not process your request.  Try again.');
+                resetDownloadStatus();
+            }
+
+        };
+
+        var initDownload = function(options) {
+
+            // options.objectId // integer
+            // options.url // string
+            // options.requestType // orig, pdf, receipt
+
+            var objectId = options.id;
+            $.data(document.body, 'objectId', objectId);
+            var requestUrl = options.url;
+            var requestType = options.type;
+
+            // If request for PDF or Digital Receipt, POST first to get the backend ball rolling
+            if(requestType.toLowerCase() === 'pdf' || requestType.toLowerCase() === 'receipt') {
+
+                // send request
+                $.ajax({
+                    url: requestUrl,
+                    data: {},
+                    type: 'POST',
+                    timeout: 2000,
+                    error: function(response) {
+                        // show bootstrap modal alert
+                        $('#failed_pdf_modal').modal('show');
+
+                        resetDownloadStatus();
+                    },
+                    success: function(response) {
+                        console.log('success', response);
+
+                        if(response.error && response.error != '') {
+                            // TODO: Just throwing an alert now, but need to use .popover()
+                            alert('Error: ' + response.error);
+                            resetDownloadStatus();
+                        }
+
+                        pollDownload(response);
+                        $.data(document.body, 'pollUrl', response.url+'&output=json');
+                    },
+                    headers: {'X-Palladium': 1}
+                });
+
+            } else if(requestType.toLowerCase() === 'orig') {
+                window.location = requestUrl;
+
+                $('#download-activity-'+objectId).hide();
+
+            }
+
+
+        };
+
+        $('ul.dropdown-menu .download').click(function(e) {
+          // stop normal link click
+          e.preventDefault();
+
+          // one at a time, please
+          if ($.data(document.body, 'currentlyDownloading')) {
+              alert('Please wait for the current download to complete.');
+              return;
+          }
+
+          var spinner = $('#'+e.target.id).parentsUntil('.dropdown').next('.download-activity');
+          spinner.show();
+          var requestType, objectId, requestUrl;
+          var bits = e.target.id.split('_');
+          if(bits.length > 0) {
+              requestType = bits[0];
+              objectId = bits[1];
+          }
+
+          $('#download-activity-'+objectId).show();
+
+          if(requestType.toLowerCase() === 'receipt') {
+              requestUrl = '/student/paper/' + objectId + '/queue_receipt_pdf?lang=en_us&output=json';
+          } else if(requestType.toLowerCase() === 'pdf') {
+              requestUrl = '/student/paper/' + objectId + '/queue_pdf?lang=en_us&output=json';
+          } else if(requestType.toLowerCase() === 'orig') {
+              var obj = $('#'+e.target.id).data('file_params');
+              var b = [];
+              for(var n in obj) {
+                  b.push(n+'='+obj[n]);
+              }
+              requestUrl = '/paper_download.asp?'+b.join('&');
+          }
+
+          initDownload({type: requestType, url: requestUrl, id: objectId});
+
+        });
+
+
+    });
+
+    var reviewMenuButton;
+    function closeReviewMenu(domId) {
+        var closeElement = document.getElementById('close-popover');
+        if (typeof closeElement !== 'undefined' && closeElement !== null) {
+            closeElement.click();
+            setReviewMenuAriaExpanded(domId, "false");
+            reviewMenuButton.focus();
+        }
+    }
+
+    function setReviewMenuAriaExpanded(domId, value=null) {
+        reviewMenuButton = document.getElementById(domId);
+        if (typeof reviewMenuButton !== 'undefined' && reviewMenuButton !== null) {
+            var expanded = /(.)*popover-trigger(.)*/.test(reviewMenuButton.classList) ? "false" : "true";   // looks at current value (before click/press)
+            if (value !== null) { expanded = value; }
+            reviewMenuButton.setAttribute('aria-expanded', expanded);
+            if (expanded === "true") {
+                // find and set focus on menu link, which can be closed with an Esc
+                setReviewMenuNavigation(reviewMenuButton);
+            } else {
+                reviewMenuButton.focus();
+            }
+        }
+    }
+
+    function setReviewMenuNavigation(reviewMenuButton) {
+        var reviewMenuId = reviewMenuButton.attributes['aria-controls'].value;
+        if (typeof reviewMenuId !== 'undefined' && reviewMenuId != null) {
+            setTimeout(function() {     // need time for browser to render peermark menu
+                var reviewMenu = document.getElementById(reviewMenuId);
+                if (typeof reviewMenu !== 'undefined' && reviewMenu != null) {
+                    var reviewMenuLIs = reviewMenu.children;
+                    if (typeof reviewMenuLIs != 'undefined' && reviewMenuLIs != null) {
+                        var countReviews = reviewMenuLIs.length;
+                        var currentLI;
+                        var reviewMenuLink;
+                        var prevLink;
+                        var nextLink;
+                        var firstLink;
+                        var secondLink;
+                        var closeLink = document.getElementById('close-popover');
+                        for (var i=0; i<countReviews; i++) {
+                            currentLI = reviewMenuLIs[i];
+                            reviewMenuLink = currentLI.children[0];
+                            if (typeof reviewMenuLink !== 'undefined') {
+                                reviewMenuLink.onkeyup = createEscListener(reviewMenuButton.id, closeReviewMenu);
+                            }
+                            if (i==0) {
+                                firstLink = reviewMenuLink;
+                                if (countReviews > 1) {
+                                    secondLink = reviewMenuLIs[1].children[0];
+                                }
+                            }
+
+                            if (i>0) {
+                                // have prevLink from previous iteration
+                                if (i == countReviews-1) {
+                                    nextLink = closeLink;
+                                } else {
+                                    nextLink = reviewMenuLIs[i+1].children[0];
+                                }
+                                reviewMenuLink.onkeydown = createPRNavLinks(prevLink.id, nextLink.id);
+                            }
+                            prevLink = reviewMenuLink;
+                        }
+
+                        // set up link between first item, last items, and close item
+                        if (countReviews > 1) {
+                            firstLink.onkeydown = createPRNavLinks(closeLink.id, secondLink.id);
+                            closeLink.onkeydown = createPRNavLinks(prevLink.id,  firstLink.id);
+                        } else {
+                            firstLink.onkeydown = createPRNavLinks(closeLink.id, closeLink.id);
+                            closeLink.onkeydown = createPRNavLinks(firstLink.id, firstLink.id);
+                        }
+                        firstLink.focus();
+                    }
+                }
+            }, 100);
+        }
+    }
+
+    function closeDownloadButtonMenu(domId) {
+        var downloadButton = document.getElementById(domId);
+        if (typeof downloadButton !== 'undefined') {
+            var parentSpan = downloadButton.parentElement;
+            if (typeof parentSpan !== 'undefined') {
+                parentSpan.classList.remove('open');
+                downloadButton.setAttribute('aria-expanded', 'false');
+            }
+        }
+    }
+
+    function setDownloadButtonAriaExpanded(domId) {
+        var downloadButton = document.getElementById(domId);
+        if (typeof downloadButton !== 'undefined') {
+            var parentSpan = downloadButton.parentElement;
+            if (typeof parentSpan !== 'undefined') {
+                var expanded = /(.)*open(.)*/.test(parentSpan.classList) ? "false" : "true";   // looks at current value (before click/press)
+                downloadButton.setAttribute('aria-expanded', expanded);
+            }
+        }
+    }
+</script>
+
+<div id="failed_pdf_modal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="failed_pdf_modal_label" aria-hidden="true">
+    <div class="modal-header">
+        <h3 id="faiuled_pdf_modal_label">Print & Download</h3>
+    </div>
+    <div class="modal-body">
+        <p>Failed to generate PDF</p>
+    </div>
+    <div class="modal-footer">
+        <!--<button class="btn btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>-->
+        <button class="btn btn-primary" aria-hidden="true" data-dismiss="modal">OK</button>
+    </div>
+</div>
+
+<!--
+    
+    <td height="30" align="center"><h2 class="lefth2">assignment list</h2></td>
+
+    <td width="473" align="center">
+    <h2 class="righth2">your portfolio</h2>
+    </td>
+    
+-->
+
+
+<div class="alert alert-block alert-info fade in">
+    <a data-dismiss="alert" class="close" onclick="hide_msg();">&times;</a>
+    <p>
+        <strong>Welcome to your new class homepage!</strong>
+        From the class homepage you can see all your assignments for your class, view additional assignment information, submit your work, and access feedback for your papers.
+    </p>
+    <p>
+        Hover on any item in the class homepage for more information.
+    </p>
+</div>
+
+
+<div class="panel dark">
+    <h2 class="hd">Class Homepage</h2>
+</div>
+
+<p>
+This is your class homepage. To submit to an assignment click on the "Submit" button to the right of the assignment name. If the Submit button is grayed out, no submissions can be made to the assignment. If resubmissions are allowed the submit button will read "Resubmit" after you make your first submission to the assignment. To view the paper you have submitted, click the "View" button. Once the assignment's post date has passed, you will also be able to view the feedback left on your paper by clicking the "View" button.
+</p>
+
+<div class="panel">
+    <h2 class="hd">Assignment Inbox: World Literature -- Period 4</h2>
+    <table id="student_assignment_table" class="content-table">
+        <tr class="col-heading">
+            <th>Assignment Title</th>
+            <th>Info</th>
+            <th>Dates</th>
+            <th>Similarity</th>
+            <th>Actions</th>
+        </tr>
+<tr id="assignment_82933893" class="Paper">
+    <input type="hidden" class="rfc2822" value="Fri, 30 Aug 2019 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Personal Essay (Artifact)</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_82933893" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_82933893', true)" onfocusout="setAriaExpanded('tooltip_82933893', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">28-Aug-2019</div>
+                <div class="time start-time"> 9:32AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">30-Aug-2019</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">05-Sep-2019</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1165055027, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1165055027">
+        <button id="download_btn_1165055027" aria-haspopup="true" aria-controls="download_menu_1165055027" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1165055027')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1165055027" id="download_menu_1165055027">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1165055027" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1165055027').data('file_params',{ oid: '1165055027', fn: 'PawnGoingUpTheBoard.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1165055027" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1165055027&fn=PawnGoingUpTheBoard.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1165055027" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1165055027" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_89922044" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 25 Mar 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">&quot;Night&quot; questions</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_89922044" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_89922044', true)" onfocusout="setAriaExpanded('tooltip_89922044', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">18-Mar-2020</div>
+                <div class="time start-time"> 4:13PM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">25-Mar-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">26-Mar-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1279426283, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1279426283">
+        <button id="download_btn_1279426283" aria-haspopup="true" aria-controls="download_menu_1279426283" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1279426283')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1279426283" id="download_menu_1279426283">
+            
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="default_1279426283" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1279426283&fn=NightStudyGuide.pdf&type=paper&p=0','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">Submission in default format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1279426283" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1279426283" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_89922117" class="Paper">
+    <input type="hidden" class="rfc2822" value="Fri, 20 Mar 2020 15:00:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">&quot;Friendship&quot; Journal Response</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_89922117" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_89922117', true)" onfocusout="setAriaExpanded('tooltip_89922117', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">18-Mar-2020</div>
+                <div class="time start-time"> 4:14PM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">20-Mar-2020</div>
+                <div class="time due-time"> 3:00PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">26-Mar-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1278515646, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1278515646">
+        <button id="download_btn_1278515646" aria-haspopup="true" aria-controls="download_menu_1278515646" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1278515646')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1278515646" id="download_menu_1278515646">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1278515646" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1278515646').data('file_params',{ oid: '1278515646', fn: 'FriendImportant.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1278515646" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1278515646&fn=FriendImportant.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1278515646" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1278515646" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_90081827" class="Paper">
+    <input type="hidden" class="rfc2822" value="Mon, 30 Mar 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Pillow Book Make-up Posting Site</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_90081827" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_90081827', true)" onfocusout="setAriaExpanded('tooltip_90081827', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">23-Mar-2020</div>
+                <div class="time start-time"> 8:26AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">30-Mar-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">31-Mar-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+        <a class="btn btn-primary submit-btn" href="t_submit.asp?r=25.2615108706053&svr=41&lang=en_us&aid=90081827">Submit</a>
+        
+        <a class="btn btn-inverse disabled tooltip view-btn" href="javascript:void(0);" title="No paper has been submitted to this assignment." tabindex="-1">View</a>
+        <a class="btn btn-inverse download disabled tooltip download-btn" href="javascript:void(0);" tabindex="-1" title="No file is available."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" /></a>
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_90179115" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 01 Apr 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #1</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_90179115" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_90179115', true)" onfocusout="setAriaExpanded('tooltip_90179115', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">25-Mar-2020</div>
+                <div class="time start-time"> 9:46AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">01-Apr-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">02-Apr-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1281885683, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1281885683">
+        <button id="download_btn_1281885683" aria-haspopup="true" aria-controls="download_menu_1281885683" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1281885683')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1281885683" id="download_menu_1281885683">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1281885683" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1281885683').data('file_params',{ oid: '1281885683', fn: 'KiteRunnerCh1_2.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1281885683" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1281885683&fn=KiteRunnerCh1_2.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1281885683" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1281885683" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_90499246" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 08 Apr 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #2</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_90499246" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_90499246', true)" onfocusout="setAriaExpanded('tooltip_90499246', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">01-Apr-2020</div>
+                <div class="time start-time"> 8:56AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">08-Apr-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">09-Apr-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1287094170, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1287094170">
+        <button id="download_btn_1287094170" aria-haspopup="true" aria-controls="download_menu_1287094170" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1287094170')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1287094170" id="download_menu_1287094170">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1287094170" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1287094170').data('file_params',{ oid: '1287094170', fn: 'KiteRunnerCh3_4_5.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1287094170" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1287094170&fn=KiteRunnerCh3_4_5.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1287094170" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1287094170" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_90786490" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 15 Apr 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Check-in -- D.L. #3</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_90786490" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_90786490', true)" onfocusout="setAriaExpanded('tooltip_90786490', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">08-Apr-2020</div>
+                <div class="time start-time"> 8:19AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">15-Apr-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">16-Apr-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1292805238, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1292805238">
+        <button id="download_btn_1292805238" aria-haspopup="true" aria-controls="download_menu_1292805238" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1292805238')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1292805238" id="download_menu_1292805238">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1292805238" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1292805238').data('file_params',{ oid: '1292805238', fn: 'Check-in_D.L._3.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1292805238" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1292805238&fn=Check-in_D.L._3.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1292805238" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1292805238" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_90786541" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 15 Apr 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #3 (Writing)</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_90786541" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_90786541', true)" onfocusout="setAriaExpanded('tooltip_90786541', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">08-Apr-2020</div>
+                <div class="time start-time"> 8:20AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">15-Apr-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">16-Apr-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1292854812, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1292854812">
+        <button id="download_btn_1292854812" aria-haspopup="true" aria-controls="download_menu_1292854812" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1292854812')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1292854812" id="download_menu_1292854812">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1292854812" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1292854812').data('file_params',{ oid: '1292854812', fn: 'KiteRunnerCh6_7_8.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1292854812" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1292854812&fn=KiteRunnerCh6_7_8.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1292854812" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1292854812" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_91320238" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 22 Apr 2020 11:00:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Check-in April 22</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_91320238" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_91320238', true)" onfocusout="setAriaExpanded('tooltip_91320238', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">22-Apr-2020</div>
+                <div class="time start-time"> 9:00AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">22-Apr-2020</div>
+                <div class="time due-time">11:00AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">29-Apr-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1304638252, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1304638252">
+        <button id="download_btn_1304638252" aria-haspopup="true" aria-controls="download_menu_1304638252" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1304638252')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1304638252" id="download_menu_1304638252">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1304638252" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1304638252').data('file_params',{ oid: '1304638252', fn: 'KiteRunnerCh9_10.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1304638252" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1304638252&fn=KiteRunnerCh9_10.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1304638252" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1304638252" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_91342446" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 29 Apr 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #4: Paragraphs</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_91342446" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_91342446', true)" onfocusout="setAriaExpanded('tooltip_91342446', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">22-Apr-2020</div>
+                <div class="time start-time"> 9:41AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">29-Apr-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">30-Apr-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1304703272, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1304703272">
+        <button id="download_btn_1304703272" aria-haspopup="true" aria-controls="download_menu_1304703272" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1304703272')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1304703272" id="download_menu_1304703272">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1304703272" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1304703272').data('file_params',{ oid: '1304703272', fn: 'KiteRunnerCh9_10.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1304703272" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1304703272&fn=KiteRunnerCh9_10.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1304703272" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1304703272" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_91628416" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 29 Apr 2020 10:30:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">D.L.A. #5 -- Check-in</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_91628416" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_91628416', true)" onfocusout="setAriaExpanded('tooltip_91628416', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">29-Apr-2020</div>
+                <div class="time start-time"> 9:02AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">29-Apr-2020</div>
+                <div class="time due-time">10:30AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">07-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1311200128, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1311200128">
+        <button id="download_btn_1311200128" aria-haspopup="true" aria-controls="download_menu_1311200128" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1311200128')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1311200128" id="download_menu_1311200128">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1311200128" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1311200128').data('file_params',{ oid: '1311200128', fn: 'KiteRunnerCh11_12.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1311200128" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1311200128&fn=KiteRunnerCh11_12.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1311200128" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1311200128" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_91630954" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 06 May 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #5 -- Paragraphs</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_91630954" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_91630954', true)" onfocusout="setAriaExpanded('tooltip_91630954', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">29-Apr-2020</div>
+                <div class="time start-time"> 9:55AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">06-May-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">07-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1311247592, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1311247592">
+        <button id="download_btn_1311247592" aria-haspopup="true" aria-controls="download_menu_1311247592" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1311247592')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1311247592" id="download_menu_1311247592">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1311247592" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1311247592').data('file_params',{ oid: '1311247592', fn: 'KiteRunnerCh11_12.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1311247592" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1311247592&fn=KiteRunnerCh11_12.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1311247592" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1311247592" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_91905038" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 06 May 2020 10:30:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">D.L.A. #6 -- Check-in</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_91905038" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_91905038', true)" onfocusout="setAriaExpanded('tooltip_91905038', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">06-May-2020</div>
+                <div class="time start-time"> 9:02AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">06-May-2020</div>
+                <div class="time due-time">10:30AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">14-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1317611663, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1317611663">
+        <button id="download_btn_1317611663" aria-haspopup="true" aria-controls="download_menu_1317611663" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1317611663')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1317611663" id="download_menu_1317611663">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1317611663" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1317611663').data('file_params',{ oid: '1317611663', fn: 'KiteRunnerCh13_14_16_17.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1317611663" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1317611663&fn=KiteRunnerCh13_14_16_17.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1317611663" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1317611663" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_91906555" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 13 May 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #6 -- Writing</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_91906555" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_91906555', true)" onfocusout="setAriaExpanded('tooltip_91906555', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">06-May-2020</div>
+                <div class="time start-time"> 9:36AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">13-May-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">14-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1317659247, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1317659247">
+        <button id="download_btn_1317659247" aria-haspopup="true" aria-controls="download_menu_1317659247" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1317659247')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1317659247" id="download_menu_1317659247">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1317659247" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1317659247').data('file_params',{ oid: '1317659247', fn: 'KiteRunnerCh13_14_16_17.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1317659247" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1317659247&fn=KiteRunnerCh13_14_16_17.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1317659247" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1317659247" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92181456" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 13 May 2020 10:00:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">D.L.A. #7 -- Check-in</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92181456" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92181456', true)" onfocusout="setAriaExpanded('tooltip_92181456', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">13-May-2020</div>
+                <div class="time start-time"> 9:08AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">13-May-2020</div>
+                <div class="time due-time">10:00AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">21-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1323402971, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1323402971">
+        <button id="download_btn_1323402971" aria-haspopup="true" aria-controls="download_menu_1323402971" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1323402971')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1323402971" id="download_menu_1323402971">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1323402971" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1323402971').data('file_params',{ oid: '1323402971', fn: 'KiteRunnerCh18_19_20_21.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1323402971" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1323402971&fn=KiteRunnerCh18_19_20_21.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1323402971" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1323402971" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92182677" class="Paper">
+    <input type="hidden" class="rfc2822" value="Sun, 17 May 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #7 -- Writing</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92182677" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92182677', true)" onfocusout="setAriaExpanded('tooltip_92182677', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">13-May-2020</div>
+                <div class="time start-time"> 9:35AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">17-May-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">21-May-2020</div>
+                <div class="time post-time">10:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1323435928, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1323435928">
+        <button id="download_btn_1323435928" aria-haspopup="true" aria-controls="download_menu_1323435928" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1323435928')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1323435928" id="download_menu_1323435928">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1323435928" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1323435928').data('file_params',{ oid: '1323435928', fn: 'KiteRunnerCh18_19_20_21.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1323435928" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1323435928&fn=KiteRunnerCh18_19_20_21.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1323435928" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1323435928" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92455712" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 20 May 2020 10:30:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">D.L.A. #8 -- Check-in</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92455712" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92455712', true)" onfocusout="setAriaExpanded('tooltip_92455712', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">20-May-2020</div>
+                <div class="time start-time"> 9:34AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">20-May-2020</div>
+                <div class="time due-time">10:30AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">28-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1328513774, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1328513774">
+        <button id="download_btn_1328513774" aria-haspopup="true" aria-controls="download_menu_1328513774" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1328513774')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1328513774" id="download_menu_1328513774">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1328513774" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1328513774').data('file_params',{ oid: '1328513774', fn: 'KiteRunnerCh22_23_24.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1328513774" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1328513774&fn=KiteRunnerCh22_23_24.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1328513774" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1328513774" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92456021" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 27 May 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #8 -- Writing</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92456021" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92456021', true)" onfocusout="setAriaExpanded('tooltip_92456021', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">20-May-2020</div>
+                <div class="time start-time"> 9:43AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">27-May-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">28-May-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1328555560, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1328555560">
+        <button id="download_btn_1328555560" aria-haspopup="true" aria-controls="download_menu_1328555560" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1328555560')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1328555560" id="download_menu_1328555560">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1328555560" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1328555560').data('file_params',{ oid: '1328555560', fn: 'KiteRunnerCh22_23_24.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1328555560" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1328555560&fn=KiteRunnerCh22_23_24.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1328555560" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1328555560" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92737016" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 27 May 2020 10:30:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">D.L.A. #9 -- Check-in</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92737016" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92737016', true)" onfocusout="setAriaExpanded('tooltip_92737016', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">27-May-2020</div>
+                <div class="time start-time"> 9:07AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">27-May-2020</div>
+                <div class="time due-time">10:30AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">04-Jun-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1332868858, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1332868858">
+        <button id="download_btn_1332868858" aria-haspopup="true" aria-controls="download_menu_1332868858" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1332868858')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1332868858" id="download_menu_1332868858">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1332868858" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1332868858').data('file_params',{ oid: '1332868858', fn: 'KiteRunnerCh25.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1332868858" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1332868858&fn=KiteRunnerCh25.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1332868858" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1332868858" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92738343" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 03 Jun 2020 23:59:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #9 - Writing</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92738343" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92738343', true)" onfocusout="setAriaExpanded('tooltip_92738343', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">27-May-2020</div>
+                <div class="time start-time"> 9:48AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">03-Jun-2020</div>
+                <div class="time due-time">11:59PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">04-Jun-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="A submission has already been made. Resubmissions are not allowed for this assignment.">Submit</a>
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1336188895, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1336188895">
+        <button id="download_btn_1336188895" aria-haspopup="true" aria-controls="download_menu_1336188895" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1336188895')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1336188895" id="download_menu_1336188895">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1336188895" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1336188895').data('file_params',{ oid: '1336188895', fn: 'KiteRunnerCh25.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1336188895" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1336188895&fn=KiteRunnerCh25.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1336188895" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1336188895" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92974323" class="Paper">
+    <input type="hidden" class="rfc2822" value="Wed, 03 Jun 2020 09:30:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">D.L.A. #10 -- Check-in</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92974323" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92974323', true)" onfocusout="setAriaExpanded('tooltip_92974323', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">03-Jun-2020</div>
+                <div class="time start-time"> 9:06AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">03-Jun-2020</div>
+                <div class="time due-time"> 9:30AM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">11-Jun-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="The due date for this assignment has passed. Resubmissions are not allowed after the due date.">Submit</a>
+            
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1337156806, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1337156806">
+        <button id="download_btn_1337156806" aria-haspopup="true" aria-controls="download_menu_1337156806" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1337156806')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1337156806" id="download_menu_1337156806">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1337156806" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1337156806').data('file_params',{ oid: '1337156806', fn: 'Final.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1337156806" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1337156806&fn=Final.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1337156806" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1337156806" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->
+<tr id="assignment_92974462" class="Paper">
+    <input type="hidden" class="rfc2822" value="Sun, 07 Jun 2020 20:00:00 -0700" />
+    <td class="title">
+        
+        <div class="assignment-title">Distance Learning Assignment #10 -- Final Writing Task</div>
+        
+    </td>
+    <td class="info">
+        
+        
+        <button id="tooltip_92974462" class="custom-tooltip unstyled-button" alt="tooltip_info" aria-expanded="false" onfocusin="setAriaExpanded('tooltip_92974462', true)" onfocusout="setAriaExpanded('tooltip_92974462', false)" aria-describedby="tooltip_info">
+          <img src="/r/build/images/icons/cms/turnitin/small_16/24511531ba9dde46d4ad56de032f42d5cb_info-blue.png" alt="info">
+           <div class="tooltiptext">
+               <h4>Assignment Instructions</h4>
+               No additional instructions have been entered for this assignment.
+               <ul>
+                   <li><em>Late paper submissions are allowed for this assignment.</em></li>
+                   <li><em>Resubmissions are not allowed for this assignment.</em></li>
+                   
+                     <li><em>Student access to similarity reports has been disabled by your instructor.</em></li>
+                
+
+               </ul>
+            </div>
+        </button>
+        
+    </td>
+    <td>
+    
+        <div class="dates">
+            <div class="tooltip" title="The start date is the date and time you can begin submitting to the assignment.">
+                <div>Start</div>
+                <div class="date start-date">03-Jun-2020</div>
+                <div class="time start-time"> 9:10AM</div>
+            </div>
+            <div class="tooltip" title="The due date is the date and time your paper is due.">
+                <div>Due</div>
+                <div class="date due-date">07-Jun-2020</div>
+                <div class="time due-time"> 8:00PM</div>
+            </div>
+            <div class="tooltip" title="The post date is the date and time you can begin viewing feedback for your paper.">
+                <div>Post</div>
+                <div class="date post-date">11-Jun-2020</div>
+                <div class="time post-time">12:00AM</div>
+            </div>
+        </div>
+    
+    </td>
+    <td class="similarity">
+        
+    
+        
+            <span class="message tooltip" title="<h4>Similarity Report Unavailable</h4>
+                Student access to this similarity report has been disabled by your instructor. Contact them for further information."><img style="margin: 0px 15px" src="/r/build/images/icons/454fbb65fd8cac4434bf927a66755ef5cb_no-report.svg" alt="no report">
+            </span>
+        
+    
+
+    </td>
+    <td class="action-buttons">
+        
+    
+        
+    
+        
+            <a class="btn btn-primary disabled tooltip submit-btn" href="javascript:void(0);" tabindex="-1" title="A submission has already been made. Resubmissions are not allowed for this assignment.">Submit</a>
+        
+        
+            
+            <a class="btn btn-inverse tooltip view-btn" title="View the file that was submitted to this assignment." href="#" onclick="Tii.cms.Utils.openDocumentViewer(1337187014, 1076974347, {isStudent: true, evBetaAccountEnabled: true, accountHidingDvReturnLink: true}); return false;" target="_blank">View</a>
+            
+            
+                
+    <span class="dropdown" id="1337187014">
+        <button id="download_btn_1337187014" aria-haspopup="true" aria-controls="download_menu_1337187014" aria-expanded="false" class="btn btn-inverse download tooltip dropdown-toggle" data-toggle="dropdown" title="Download the original file or digital receipt for the file that was submitted to this assignment."><img src="/r/build/images/buttons/small/e23e5831aa5237e5cda08114b103c037cb_download.png" alt="Download" onclick="setDownloadButtonAriaExpanded('download_btn_1337187014')"/></button>
+        <!-- IF DOWNLOAD MENU -->
+        <ul class="dropdown-menu" role="menu" tabindex="-1" aria-labelledby="download_btn_1337187014" id="download_menu_1337187014">
+            
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="orig_1337187014" class="download">Originally submitted format</a><script type="text/javascript">jQuery('#orig_1337187014').data('file_params',{ oid: '1337187014', fn: 'Final.docx', type: 'paper', p: 0});</script></li>
+            <li role="none"><a role="menuitem" tabindex="-1" href="#" id="pdf_1337187014" onclick="window.open('/download_file.asp?r=25.2615108706053&svr=41&lang=en_us&lang=&oid=1337187014&fn=Final.docx&type=paper&p=1','_download', 'height=150,width=370,location=0,status=0,menubar=0,scrollbars=0');">PDF format</a></li>
+            
+            <li role="none"><a role="menuitem" tabindex="-1" id="receipt_1337187014" class="download" href="#">Digital receipt</a></li>
+        </ul>
+        <span class="download-activity"><img id="download-activity-1337187014" src="/r/build/images/icons/cms/turnitin/small_16/7b9776076d5fceef4993b55c9383deddcb_ajax-indicator.gif" /></span>
+    </span>
+
+            
+        
+    
+
+
+    
+
+    </td>
+</tr><!--delete this page-->    </table>
+</div>
+<!-- /.panel -->
+
+<div class="clear"></div>
+
+	
+
+
+<!-- Main Section Closed -->
+</div>
+<!-- Main Section Close -->
+
+
+<!-- Main Content Closed -->
+<div class="clear"></div>
+</div>
+<!-- Main Content Closed -->
+
+
+<div id="footer_container">
+	<div id="footer">
+        
+        <p>Copyright &copy; 1998 &ndash; 2020 <a href="http://www.turnitin.com" target="_blank">Turnitin, LLC</a>. All rights reserved.</p>
+        
+
+        <ul>
+            
+
+            
+                <li><a tabindex="0" target="_policy" href="https://help.turnitin.com/Privacy_and_Security/Privacy_and_Security.htm#Privacy_Policy">Privacy Policy</a></li>
+                <li><a tabindex="0" target="_pledge" href="https://help.turnitin.com/Privacy_and_Security/Privacy_and_Security.htm#Privacy_Pledge">Privacy Pledge</a></li>
+                <li><a tabindex="0" target="_termsofservice" href="https://help.turnitin.com/Privacy_and_Security/Privacy_and_Security.htm#Terms_of_Service">Terms of Service</a></li>
+                <li><a tabindex="0" target="_eudataprotectioncompliance" href="https://help.turnitin.com/Privacy_and_Security/Privacy_and_Security.htm#EU_Data_Protection_and_GDPR_Compliance">EU Data Protection Compliance</a></li>
+                <li><a tabindex="0" target="_copyrightprotection" href="https://help.turnitin.com/Privacy_and_Security/Privacy_and_Security.htm#Copyright_Protection">Copyright Protection</a></li>
+                <li><a tabindex="0" target="_legalfaqs" href="https://help.turnitin.com/Privacy_and_Security/Privacy_and_Security.htm#Legal_FAQs">Legal FAQs</a></li>
+                
+
+                
+                    <li class="help_button"><a tabindex="0" target="_helpdesk" href="/help/helpdesk.asp?r=25.2615108706053&svr=41&lang=en_us&">Helpdesk</a></li>
+                
+
+                
+                    <li><a tabindex="0" href="http://www.plagiarism.org" target="new">Research Resources</a></li>
+                
+
+            
+        </ul>
+	</div>
+</div>
+
+<div id="invis">
+    
+    
+    
+</div>
+
+<!-- Wrapper Content Closed -->
+<div class="clear"></div>
+</div>
+<!-- Wrapper Content Closed -->
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-145472-24']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+    <div id="timeoutDialog" class="modal-dialog" role="alertdialog" tabindex="-1" aria-live="assertive" aria-describedby="alertText" aria-label="timeoutDialog">
+        <h2 class="hd">Timeout Warning</h2>
+        <p id="alertText" class="bd">
+            For security reasons, this page will expire in exactly <b>30 seconds.</b> If you would like to continue working on this page without timing out, click "extend session" below.
+        </p>
+        <div class="ft"><a id="extend-timer" href="#">Extend session</a></div>
+    </div>
+
+<script src="https://cdn.levelaccess.net/accessjs/YW1wMTIyMjU/access.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
