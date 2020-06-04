@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 from bs4 import BeautifulSoup
 
 __LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
@@ -101,21 +102,19 @@ def __getAssignmentInfo(e):
     return e.find("td", {"class": "info"}).find("button").find("div").text
 
 
+def __convertDate(raw):
+    date = raw.find("div", {"class": "date"}).text
+    time = raw.find("div", {"class": "time"}).text
+    dateObject = datetime.strptime(date + " " + time, "%d-%b-%Y %I:%M%p")
+    return dateObject.strftime("%m-%d-%Y %H:%M:%S")
+
+
 def __getAssignmentDate(e):
     raw_dates = e.find_all("td")[2].find("div").find_all("div", {"class": "tooltip"})
     return {
-        "Start": {
-            "Date": raw_dates[0].find("div", {"class": "date start-date"}).text,
-            "Time": raw_dates[0].find("div", {"class": "time start-time"}).text,
-        },
-        "Due": {
-            "Date": raw_dates[1].find("div", {"class": "date due-date"}).text,
-            "Time": raw_dates[1].find("div", {"class": "time due-time"}).text,
-        },
-        "Post": {
-            "Date": raw_dates[2].find("div", {"class": "date post-date"}).text,
-            "Time": raw_dates[2].find("div", {"class": "time post-time"}).text,
-        },
+        "start": __convertDate(raw_dates[0]),
+        "due": __convertDate(raw_dates[1]),
+        "post": __convertDate(raw_dates[2]),
     }
 
 
