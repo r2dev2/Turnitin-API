@@ -64,7 +64,7 @@ import json
 
 url = "https://turnitin-api.herokuapp.com"
 USERNAME = "email@example.com"
-PASSWORD = "password";
+PASSWORD = "password"
 
 with requests.Session() as s:
     login_result = s.post(url + "/login", json={
