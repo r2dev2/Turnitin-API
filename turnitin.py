@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
+import re
 
 __LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 __HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
@@ -99,7 +100,12 @@ def __getAssignmentTitle(e):
 
 
 def __getAssignmentInfo(e):
-    return e.find("td", {"class": "info"}).find("button").find("div").text
+    info = e.find("td", {"class": "info"}).find("button").find("div").text
+    info = re.sub(r"\s\s+", " ", info)
+    info = info.replace("\n", " ")
+    info = info.replace(" Assignment Instructions ", "", 1)
+    info = info[:-1]
+    return info
 
 
 def __convertDate(raw):

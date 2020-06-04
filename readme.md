@@ -16,8 +16,9 @@ JavaScript:
 ```javascript
 var email = "email@example.com"
 var password = "password";
+var host = "https://turnitin-api.herokuapp.com";
 var authKeys;
-fetch("https://turnitin-api.herokuapp.com/login", {
+fetch(host + "/login", {
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -29,7 +30,7 @@ fetch("https://turnitin-api.herokuapp.com/login", {
 }).then(json=>{
     authKeys = json.auth;
 }).then(()=>{
-    return fetch("https://turnitin-api.herokuapp.com/classes", {
+    return fetch(host + "/classes", {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -43,7 +44,7 @@ fetch("https://turnitin-api.herokuapp.com/login", {
     console.log(classes);
     return classes[0];
 }).then(firstClass=>{
-    return fetch("https://turnitin-api.herokuapp.com/assignments", {
+    return fetch(host + "/assignments", {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
