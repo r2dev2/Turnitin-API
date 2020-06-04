@@ -67,19 +67,19 @@ USERNAME = "email@example.com"
 PASSWORD = "password";
 
 with requests.Session() as s:
-	s.headers.update({"Content-Type": "application/json"})
-	login_result = s.post(url + "/login", data=json.dumps({
-		"email": USERNAME,
-		"password": PASSWORD
-	}))
-	auth = json.loads(login_result.text)
-	classes_result = s.post(url + "/classes", data=json.dumps(auth))
-	classes = json.loads(classes_result.text)
-	print(classes[0])
-	first_class_data = dict(auth)
-	first_class_data["url"] = classes[0]["url"]
-	assignments_result = s.post(url + "/assignments", data=json.dumps(first_class_data))
-	assignments = json.loads(assignments_result)
-	print(assignments[0])
+    s.headers.update({"Content-Type": "application/json"})
+    login_result = s.post(url + "/login", data=json.dumps({
+        "email": USERNAME,
+        "password": PASSWORD
+    }))
+    auth = json.loads(login_result.text)
+    classes_result = s.post(url + "/classes", data=json.dumps(auth))
+    classes = json.loads(classes_result.text)
+    print(classes[0])
+    first_class_data = dict(auth)
+    first_class_data["url"] = classes[0]["url"]
+    assignments_result = s.post(url + "/assignments", data=json.dumps(first_class_data))
+    assignments = json.loads(assignments_result)
+    print(assignments[0])
 
 ```
