@@ -79,7 +79,6 @@ with requests.Session() as s:
     first_class_data = dict(auth)
     first_class_data["url"] = classes[0]["url"]
     assignments_result = s.post(url + "/assignments", data=json.dumps(first_class_data))
-    assignments = json.loads(assignments_result)
+    assignments = json.loads(assignments_result.text)
     print(assignments[0])
-
 ```
