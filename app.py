@@ -2,9 +2,10 @@ from flask import Flask, request, jsonify
 import json
 import os
 import turnitin
+from flask_cors import CORS
 
 app = Flask(__name__, static_url_path="")
-algo = None
+CORS(app)
 
 
 @app.route("/login", methods=["POST"])
