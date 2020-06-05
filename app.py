@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 import json
 import os
 import turnitin
@@ -24,6 +24,14 @@ def getClasses():
 def getAssignments():
     data = request.get_json()
     return jsonify(turnitin.getAssignments(data["url"], data["auth"]))
+
+
+# @app.route("/submissions", methods=["POST"])
+# def getDownloads():
+#     data = request.get_json()
+#     bites = turnitin.getDownloads(data["auth"], data["oid"], 
+#             data["name"], data["pdf"])
+    
 
 
 @app.route("/")

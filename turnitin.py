@@ -5,6 +5,7 @@ import re
 
 __LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 __HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
+__DOWNLOAD_URL = "https://www.turnitin.com/paper_download.asp"
 __HEADERS = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
     "sec-ch-ua": '"Chromium";v="85", "\\\\Not;A\\"Brand";v="99", "Microsoft Edge";v="85"',
@@ -50,9 +51,22 @@ def getAssignments(url, cookies):
             "info": __getAssignmentInfo(assignment),
             "dates": __getAssignmentDate(assignment),
             "submission": __getSubmissionLink(assignment),
+            "oid": __getOid(assignment),
+            "file": __getFileName(assignment),
         }
         for assignment in table
     ]
+
+def getDownload(cookies, oid, filename, pdf):
+    s = __newSession()
+    __setCookies(s, cookies)
+    query = {
+        "oid": oid,
+        "fn": filename,
+        "type": "paper",
+        "p": int(pdf)
+    }
+    return s.get(__DOWNLOAD_URL, params=query).content
 
 
 def __newSession():
@@ -128,6 +142,18 @@ def __getSubmissionLink(e):
     return e.find("td", {"class": "action-buttons"}).find("a")["href"]
 
 
+def __getOid(e):
+    return re.search("(/d+)", e.find("a")["id"]).group(1)
+
+
+def __getFileName(e):
+    try:
+        return re.search("fn=(.+)\&type", e.find("a")["onclick"]).group(1)
+    except KeyError:
+        return "void"
+
+
 def __getAssignmentTable(html):
     soup = BeautifulSoup(html, "html.parser")
     return soup.find_all("tr", {"class": "Paper"})
+
