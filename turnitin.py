@@ -140,8 +140,13 @@ def __getSubmissionLink(e):
 
 def __getOid(e):
     try:
-        return re.search("(/d+)", e.find("a")["id"]).group(1)
+        pattern = re.compile("(\d+)");
+        print(f"[DEBUG] Searching {e.find('a')['id']} for {pattern}")
+        return re.search(pattern, e.find("a")["id"]).group(1)
     except KeyError:
+        return "void"
+    except AttributeError:
+        print(f"[DEBUG] {e} of type {type(e)} does not seem to have a .find()")
         return "void"
 
 

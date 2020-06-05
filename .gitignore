@@ -3,3 +3,5 @@ personal.py
 personal.js
 __pycache__/
 test.*
+.vscode/
+personal_test.py
