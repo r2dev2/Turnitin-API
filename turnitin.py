@@ -57,15 +57,11 @@ def getAssignments(url, cookies):
         for assignment in table
     ]
 
+
 def getDownload(cookies, oid, filename, pdf):
     s = __newSession()
     __setCookies(s, cookies)
-    query = {
-        "oid": oid,
-        "fn": filename,
-        "type": "paper",
-        "p": int(pdf)
-    }
+    query = {"oid": oid, "fn": filename, "type": "paper", "p": int(pdf)}
     return s.get(__DOWNLOAD_URL, params=query).content
 
 
@@ -143,7 +139,10 @@ def __getSubmissionLink(e):
 
 
 def __getOid(e):
-    return re.search("(/d+)", e.find("a")["id"]).group(1)
+    try:
+        return re.search("(/d+)", e.find("a")["id"]).group(1)
+    except KeyError:
+        return "void"
 
 
 def __getFileName(e):
@@ -151,9 +150,10 @@ def __getFileName(e):
         return re.search("fn=(.+)\&type", e.find("a")["onclick"]).group(1)
     except KeyError:
         return "void"
+    except AttributeError:
+        return "void"
 
 
 def __getAssignmentTable(html):
     soup = BeautifulSoup(html, "html.parser")
     return soup.find_all("tr", {"class": "Paper"})
-
