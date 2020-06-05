@@ -51,8 +51,8 @@ def getAssignments(url, cookies):
             "info": __getAssignmentInfo(assignment),
             "dates": __getAssignmentDate(assignment),
             "submission": __getSubmissionLink(assignment),
-            "oid": __getOid(assignment),
-            "file": __getFileName(assignment),
+            "oid": __getOid(__getMenu(assignment)),
+            "file": __getFileName(__getMenu(assignment)),
         }
         for assignment in table
     ]
@@ -152,6 +152,10 @@ def __getFileName(e):
         return "void"
     except AttributeError:
         return "void"
+
+
+def __getMenu(e):
+    return e.find("ul", {"class": "dropdown-menu"})
 
 
 def __getAssignmentTable(html):
