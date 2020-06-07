@@ -151,11 +151,23 @@ def __getOid(e):
 
 
 def __getFileName(e):
+    pattern = re.compile("fn=(.+)\\&.+\\&")
     try:
-        return re.search("fn=(.+)\&type", e.find("a")["onclick"]).group(1)
+        print(f"[DEBUG] Searching {e} for {pattern}")
+        return re.search(pattern, str(e)).group(1)
     except KeyError:
+        # uin = ''
+        # QUIT = 0
+        # while uin != "QUIT":
+        #     try:
+        #         uin = input(">>> ")
+        #         eval(uin)
+        #     except:
+        #         pass
+        print(f"[DEBUG] Fuck you bich (from __getFileName(e))")
         return "void"
     except AttributeError:
+        print(f"[DEBUG] {e} of type {type(e)} does not seem to have a .find()")
         return "void"
 
 
