@@ -85,26 +85,35 @@ fetch(host + "/login", {
 Python 3:
 ```python
 import requests
-import json
 
 url = "https://turnitin-api.herokuapp.com"
+
 USERNAME = "email@example.com"
 PASSWORD = "password"
+
 
 with requests.Session() as s:
     login_result = s.post(url + "/login", json={
         "email": USERNAME,
         "password": PASSWORD
     })
-    auth = json.loads(login_result.text)
+    auth = login_result.json()
 
     classes_result = s.post(url + "/classes", json=auth)
-    classes = json.loads(classes_result.text)
-    print(classes[0])
+    classes = classes_result.json()
+    for c in classes:
+        if "World Lit" in c["title"]:
+            world_lit = c
+    print(world_lit)
 
-    first_class_data = dict(auth)
-    first_class_data["url"] = classes[0]["url"]
+    first_class_data = dict(auth, url=world_lit["url"])
     assignments_result = s.post(url + "/assignments", json=first_class_data)
-    assignments = json.loads(assignments_result.text)
+    assignments = assignments_result.json()
     print(assignments[0])
+
+    download_query = dict(**auth, assignment=assignments[0], pdf=True)
+    r = s.post(url + '/download', json=download_query)
+    print(f"Status code {r.status_code}")
+    with open("test_download.pdf", 'wb+') as fout:
+        fout.write(r.content)
 ```
