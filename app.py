@@ -26,11 +26,11 @@ def getAssignments():
     return jsonify(turnitin.getAssignments(data["url"], data["auth"]))
 
 
-@app.route("/submission", methods=["POST"])
+@app.route("/download", methods=["POST"])
 def getDownload():
     data = request.get_json()
     fileBytes = turnitin.getDownload(
-        data["auth"], data["oid"], data["name"], data["pdf"]
+        data["auth"], data["assignment"]["oid"], data["assignment"]["name"], data["pdf"]
     )
     return jsonify(fileBytes)
 
