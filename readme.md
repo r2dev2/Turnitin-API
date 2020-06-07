@@ -18,6 +18,8 @@ var email = "email@example.com"
 var password = "password";
 var host = "https://turnitin-api.herokuapp.com";
 var authKeys;
+var toDownload;
+var pdf = false;
 fetch(host + "/login", {
     headers: {
         'Accept': 'application/json',
@@ -56,6 +58,27 @@ fetch(host + "/login", {
     return response.json();
 }).then(assignments=>{
     console.log(assignments);
+    return assignments[0];
+}).then(assignment=>{
+    toDownload = assignment;
+    return fetch(host + "/download", {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        "body": JSON.stringify({auth: authKeys, assignment: toDownload, pdf: pdf}),
+        "method": "POST"
+    });
+}).then(response=>{
+    return response.blob();
+}).then(blob=>{
+    console.log(blob);
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    var filename = pdf?(toDownload.title+".pdf"):toDownload.file;
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
 });
 ```
 Python 3:

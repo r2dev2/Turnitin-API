@@ -62,9 +62,9 @@ def getDownload(cookies, oid, filename, pdf):
     s = __newSession()
     __setCookies(s, cookies)
     query = {"oid": oid, "fn": filename, "type": "paper", "p": int(pdf)}
-    print(f"[DEBUG] Ah shit, here we go again")
+    # print(f"[DEBUG] Ah shit, here we go again")
     r = s.get(__DOWNLOAD_URL, params=query)
-    print(f"[DEBUG] Status code of {r.status_code}")
+    # print(f"[DEBUG] Status code of {r.status_code}")
     return r.content
 
 
@@ -143,20 +143,20 @@ def __getSubmissionLink(e):
 
 def __getOid(e):
     try:
-        pattern = re.compile("(\d+)");
-        print(f"[DEBUG] Searching {e.find('a')['id']} for {pattern}")
+        pattern = re.compile("(\d+)")
+        # print(f"[DEBUG] Searching {e.find('a')['id']} for {pattern}")
         return re.search(pattern, e.find("a")["id"]).group(1)
     except KeyError:
         return "void"
     except AttributeError:
-        print(f"[DEBUG] {e} of type {type(e)} does not seem to have a .find()")
+        # print(f"[DEBUG] {e} of type {type(e)} does not seem to have a .find()")
         return "void"
 
 
 def __getFileName(e):
     pattern = re.compile("fn=(.+)\\&.+\\&")
     try:
-        print(f"[DEBUG] Searching {e} for {pattern}")
+        # print(f"[DEBUG] Searching {e} for {pattern}")
         return re.search(pattern, str(e)).group(1)
     except KeyError:
         # uin = ''
@@ -167,10 +167,10 @@ def __getFileName(e):
         #         eval(uin)
         #     except:
         #         pass
-        print(f"[DEBUG] Fuck you bich (from __getFileName(e))")
+        # print(f"[DEBUG] Fuck you bich (from __getFileName(e))")
         return "void"
     except AttributeError:
-        print(f"[DEBUG] {e} of type {type(e)} does not seem to have a .find()")
+        # print(f"[DEBUG] {e} of type {type(e)} does not seem to have a .find()")
         return "void"
 
 
