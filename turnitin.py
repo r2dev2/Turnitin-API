@@ -62,7 +62,10 @@ def getDownload(cookies, oid, filename, pdf):
     s = __newSession()
     __setCookies(s, cookies)
     query = {"oid": oid, "fn": filename, "type": "paper", "p": int(pdf)}
-    return s.get(__DOWNLOAD_URL, params=query).content
+    print(f"[DEBUG] Ah shit, here we go again")
+    r = s.get(__DOWNLOAD_URL, params=query)
+    print(f"[DEBUG] Status code of {r.status_code}")
+    return r.content
 
 
 def __newSession():
