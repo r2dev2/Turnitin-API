@@ -10,12 +10,14 @@ import turnitin
 app = Flask(__name__, static_url_path="")
 CORS(app)
 
+
 @app.before_request
 def before_request():
-    if not app.debug and request.url.startswith('http://'):
-        url = request.url.replace('http://', 'https://', 1)
+    if not app.debug and request.url.startswith("http://"):
+        url = request.url.replace("http://", "https://", 1)
         code = 301
         return redirect(url, code=code)
+
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -53,4 +55,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug="--debug" in sys.argv)
+    app.run(debug=(not "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")))
