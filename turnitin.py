@@ -6,6 +6,7 @@ import re
 __LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 __HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
 __DOWNLOAD_URL = "https://www.turnitin.com/paper_download.asp"
+__SUBMIT_URL = "https://www.turnitin.com/t_submit.asp"
 __HEADERS = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
     "sec-ch-ua": '"Chromium";v="85", "\\\\Not;A\\"Brand";v="99", "Microsoft Edge";v="85"',
@@ -51,6 +52,7 @@ def getAssignments(url, cookies):
             "info": __getAssignmentInfo(assignment),
             "dates": __getAssignmentDate(assignment),
             "submission": __getSubmissionLink(assignment),
+            "aid": __getAid(assignment),
             "oid": __getOid(__getMenu(assignment)),
             "file": __getFileName(__getMenu(assignment)),
         }
@@ -65,6 +67,23 @@ def getDownload(cookies, oid, filename, pdf):
     # print(f"[DEBUG] Ah shit, here we go again")
     r = s.get(__DOWNLOAD_URL, params=query)
     # print(f"[DEBUG] Status code of {r.status_code}")
+    return r.content
+
+
+def submit(cookies, aid, submission_title, filebytes, author_first, author_last):
+    s = __newSession()
+    __setCookies(s, cookies)
+
+    query = {"aid": aid, "session-id": cookies["session-id"], "lang": "en_us"}
+    form_data = {
+        "async_request": 0,
+        "author_first": author_first, 
+        "author_last": author_last,
+        "title": submission_title,
+        "userfile": filebytes
+    }
+
+    r = s.post(__SUBMIT_URL, data=form_data, params=query)
     return r.content
 
 
@@ -139,6 +158,10 @@ def __getAssignmentDate(e):
 
 def __getSubmissionLink(e):
     return e.find("td", {"class": "action-buttons"}).find("a")["href"]
+
+
+def __getAid(e):
+    return re.search("(\d+)", e["id"]).group(1)
 
 
 def __getOid(e):
