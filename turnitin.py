@@ -84,7 +84,7 @@ def submit(cookies, aid, submission_title, filebytes, author_first, author_last)
     }
 
     r = s.post(__SUBMIT_URL, data=form_data, params=query)
-    return r.content
+    return r
 
 
 def __newSession():
@@ -203,4 +203,4 @@ def __getMenu(e):
 
 def __getAssignmentTable(html):
     soup = BeautifulSoup(html, "html.parser")
-    return soup.find_all("tr", {"class": "Paper"})
+    return soup.find_all("tr", {"class": ("Paper", "Revision")})
