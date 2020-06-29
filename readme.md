@@ -91,8 +91,8 @@ All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turni
 * Form Data:
     ```javascript
     {
-        auth: {/* authorization object */},
-        assignment: {/* assignment object */},
+        auth: "authorization object",
+        assignment: "assignment object",
         title: "Submission Title",
         filename: "FileName.format",
         userfile: undefined // submission file
@@ -140,7 +140,7 @@ with requests.Session() as s:
             world_lit = c
     print(world_lit)
 
-    first_course_data = dict(auth, url=world_lit["url"])
+    first_course_data = dict(**auth, course=world_lit)
     assignments_result = s.post(url + "/assignments", json=first_course_data)
     assignments = assignments_result.json()
     print(assignments[0])
@@ -152,14 +152,15 @@ with requests.Session() as s:
         fout.write(r.content)
 
     # Example case - submit to the fourth assignment 
-    uf = open("Document.docx", 'rb')
-    submit_query = dict(
-        auth=json.dumps(auth["auth"]),
-        assignment=json.dumps(assignments[3]),
-        title="test submission 1",
-        filename="Document.docx"
-    )
-    r = s.post(url + "/submit", data=submit_query, files={"userfile": uf})
+    with open("Document.docx", 'rb') as uf:
+        # We must convert the json to a string to submit in a form
+        submit_query = dict(
+            auth=json.dumps(auth["auth"]),
+            assignment=json.dumps(assignments[3]),
+            title="test submission 1",
+            filename="Document.docx"
+        )
+        r = s.post(url + "/submit", data=submit_query, files={"userfile": uf})
     print(r.json())
 ```
 
