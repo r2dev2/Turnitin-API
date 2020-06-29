@@ -75,29 +75,26 @@ All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turni
     {
         auth: {/*authentication object */},
         assignment: {/* assignment object */},
-        pdf: false /* PDF or original submission format */
+        pdf: false // PDF or original submission format
     }
     ```
-* Response:
-    ```javascript
-    /* Raw file bytes */
-    ```
+* Response: `Raw File Bytes`
 
 
 ### `/submit`
 * Method: `POST`
 * Payload:
-    * JSON:
+    * Form Data:
         ```javascript
         {
             auth: {/* authorization object */},
             assignment: {/* assignment object */},
             title: "Submission Title",
-            filename: "FileName.format"
+            filename: "FileName.format",
+            userfile: undefined // submission file
         }
         ```
-    * Form Data:
-        * `userfile`: file
+        > The `/submit` endpoint accepts form data, not JSON. 
 * Response:
     ```javascript
     {
@@ -114,7 +111,7 @@ All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turni
 
 # Examples
 
-Python 3:
+## Python 3
 ```python
 import json
 import requests
@@ -153,7 +150,7 @@ with requests.Session() as s:
     with open("test_download.pdf", 'wb+') as fout:
         fout.write(r.content)
 
-    # In this example case, the fourth assignment 
+    # Example case - submit to the fourth assignment 
     uf = open("Document.docx", 'rb')
     submit_query = dict(
         auth=json.dumps(auth["auth"]),
