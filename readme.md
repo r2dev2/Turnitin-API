@@ -1,5 +1,5 @@
-# Turnitin-API
-An unofficial REST API for Turnitin.
+# Turnitin API
+An unofficial REST API for [Turnitin.com](https://www.turnitin.com/).
 
 Built by
 [Ronak Badhe](https://github.com/r2dev2bb8/)
@@ -124,9 +124,6 @@ url = "https://turnitin-api.herokuapp.com"
 
 USERNAME = "email@example.com"
 PASSWORD = "password"
-
-FIRSTNAME = "Michael"
-LASTNAME = "Reeves"
 
 
 with requests.Session() as s:
