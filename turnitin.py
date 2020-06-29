@@ -2,11 +2,13 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 import re
+import io
 
 __LOGIN_URL = "https://www.turnitin.com/login_page.asp?lang=en_us"
 __HOMEPAGE = "https://www.turnitin.com/s_class_portfolio.asp"
 __DOWNLOAD_URL = "https://www.turnitin.com/paper_download.asp"
 __SUBMIT_URL = "https://www.turnitin.com/t_submit.asp"
+__CONFIRM_URL = "https://www.turnitin.com/submit_confirm.asp"
 __HEADERS = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
     "sec-ch-ua": '"Chromium";v="85", "\\\\Not;A\\"Brand";v="99", "Microsoft Edge";v="85"',
@@ -70,21 +72,74 @@ def getDownload(cookies, oid, filename, pdf):
     return r.content
 
 
-def submit(cookies, aid, submission_title, filebytes, author_first, author_last):
+def submit(
+    cookies,
+    aid,
+    submission_title,
+    filename,
+    filebytes,
+    author_first,
+    author_last,
+    referrer,
+):
     s = __newSession()
     __setCookies(s, cookies)
-
+    filebytes = bytes(filebytes)
     query = {"aid": aid, "session-id": cookies["session-id"], "lang": "en_us"}
-    form_data = {
-        "async_request": 0,
-        "author_first": author_first, 
-        "author_last": author_last,
-        "title": submission_title,
-        "userfile": filebytes
-    }
-
-    r = s.post(__SUBMIT_URL, data=form_data, params=query)
-    return r
+    form_data = dict(
+        async_request=1,
+        author_first=author_first,
+        author_last=author_last,
+        title=submission_title,
+        filename="SampleSubmission.docx",
+        referer=referrer,
+        # userfile='',
+        db_doc="",
+        dropbox_filename="",
+        google_doc="",
+        google_auth_uri="",
+        token="",
+        submit_button="",
+    )
+    print(form_data)
+    r = s.post(
+        __SUBMIT_URL,
+        data=form_data,
+        files={
+            "userfile": (
+                "Document.docx",
+                open("Document.docx", "rb"),
+                # io.BytesIO(filebytes),
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            ),
+            "Content-Disposition": 'form-data; name="file"; filename="Document.docx"',
+            "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        },
+        headers={"accept": "application/json"},
+        params=query,
+        cookies=cookies,
+    )
+    uuid = r.json()["uuid"]
+    r = None
+    while r == None or r.json()["status"] != 1:
+        r = s.post(
+            "https://www.turnitin.com/panda/get_submission_metadata.asp",
+            params={
+                "session-id": cookies["session-id"],
+                "lang": "en_us",
+                "skip_ready_check": 0,
+                "uuid": uuid,
+            },
+        )
+    metadata = r.json()
+    session = cookies["session-id"]
+    r = s.post(
+        (
+            f"{__CONFIRM_URL}?lang=en_us&sessionid={session}&"
+            f"data-state=confirm&uuid={uuid}"
+        )
+    )
+    return metadata
 
 
 def __newSession():

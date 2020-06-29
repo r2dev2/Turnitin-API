@@ -49,6 +49,21 @@ def getDownload():
     return fileBytes
 
 
+@app.route("/submit", methods=["POST"])
+def uploadFile():
+    data = request.get_json()
+    turnitin.submit(
+        data["auth"],
+        data["assignment"]["oid"],
+        data["submission"]["title"],
+        data["submission"]["filename"],
+        data["submission"]["file"],
+        data["firstname"],
+        data["lastname"],
+        "https://www.turnitin.com/" + data["assignment"]["submission"]
+    )
+
+
 @app.route("/")
 def index():
     return app.send_static_file("index.html")
