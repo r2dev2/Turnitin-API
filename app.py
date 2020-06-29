@@ -54,7 +54,7 @@ def uploadFile():
     data = request.get_json()
     turnitin.submit(
         data["auth"],
-        data["assignment"]["oid"],
+        data["assignment"]["aid"],
         data["submission"]["title"],
         data["submission"]["filename"],
         data["submission"]["file"],

@@ -87,7 +87,7 @@ def submit(
     filebytes = bytes(filebytes)
     query = {"aid": aid, "session-id": cookies["session-id"], "lang": "en_us"}
     form_data = dict(
-        async_request=1,
+        async_request=0,
         author_first=author_first,
         author_last=author_last,
         title=submission_title,
