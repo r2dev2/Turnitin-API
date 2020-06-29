@@ -65,8 +65,6 @@ def uploadFile():
         data["title"],
         data["filename"],
         request.files["userfile"].stream,
-        data["firstname"],
-        data["lastname"],
         "https://www.turnitin.com/" + json.loads(data["assignment"])["submission"]
     )
 

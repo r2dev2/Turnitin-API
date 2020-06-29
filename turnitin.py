@@ -79,12 +79,13 @@ def submit(
     submission_title,
     filename,
     userfile,
-    author_first,
-    author_last,
     referrer,
 ):
     s = __newSession()
     __setCookies(s, cookies)
+
+    r = s.get(referrer)
+    author_first, author_last = __getAuthorName(r.text)
 
     file_to_mime = {
         "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -283,3 +284,10 @@ def __getMenu(e):
 def __getAssignmentTable(html):
     soup = BeautifulSoup(html, "html.parser")
     return soup.find_all("tr", {"class": ("Paper", "Revision")})
+
+def __getAuthorName(html):
+    soup = BeautifulSoup(html, "html.parser")
+    return (
+        soup.find_all("div", {"class": "form-group"})[0].find("input")["value"],
+        soup.find_all("div", {"class": "form-group"})[1].find("input")["value"]
+    )
