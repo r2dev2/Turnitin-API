@@ -162,3 +162,8 @@ with requests.Session() as s:
     r = s.post(url + "/submit", data=submit_query, files={"userfile": uf})
     print(r.json())
 ```
+
+## Additional Information
+* The API may fail to collect information about your courses and assignments if there are more than 25 items. To mitigate this issue, increase the `Items per page` setting in your Turnitin `User Info` panel.
+
+    ![Items Per Page Setting](./images/items_per_page.png)
