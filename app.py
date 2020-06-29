@@ -25,16 +25,16 @@ def login():
     return jsonify({"auth": turnitin.login(data["email"], data["password"])})
 
 
-@app.route("/classes", methods=["POST"])
-def getClasses():
+@app.route("/coursees", methods=["POST"])
+def getCourses():
     data = request.get_json()
-    return jsonify(turnitin.getClasses(data["auth"]))
+    return jsonify(turnitin.getcoursees(data["auth"]))
 
 
 @app.route("/assignments", methods=["POST"])
 def getAssignments():
     data = request.get_json()
-    return jsonify(turnitin.getAssignments(data["url"], data["auth"]))
+    return jsonify(turnitin.getAssignments(data["course"]["url"], data["auth"]))
 
 
 @app.route("/download", methods=["POST"])

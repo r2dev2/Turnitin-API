@@ -3,18 +3,114 @@ An unofficial REST API for Turnitin.
 
 ## Endpoints
 
-All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turnitin-api.herokuapp.com).
+All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turnitin-api.herokuapp.com). **Use HTTPS to protect your credentials**.
 
-| URL | Method | Data | Response |
-|:----|:-------|:-----|:---------|
-| `/login` | `POST` | `{ email: "email", password: "password" }` | `{ auth: [json] }` |
-| `/classes` | `POST` | `{ auth: [json] } ` | `[{title: "title", url: "url"}, ...]` |
-| `/assignments` | `POST` | `{ auth: [json], url: "url" }` | `[{ title: "title", dates: { due: "due", post: "post", start: "start" }, info: "info", submission: "url" }, ...]` |
-| `/download` | `POST` | `{ auth: [json], assignment: [json], pdf: [true/false] } ` | Raw bytes of file submitted |
 
-| URL | Method | Form | Response |
-|:----|:-------|:-----|:---------|
-| `/submit` | `POST` | `{ auth: "auth", assignment: "assignment", title: "title", filename: "filename" }` | `{ char_count: uint, file_name: "file_name", file_size: "file_size", "image_url_stub": "path_to_image", page_count: uint, status: bool, uuid: "uuid", word_count: uint }`
+### `/login`
+* Method: `POST`
+* Payload:
+    ```javascript 
+    {
+        email: "example@example.com",
+        password: "password"
+    }
+    ```
+* Response:
+    ```javascript
+    {
+        auth: {/* authentication object */}
+    }
+    ```
+
+### `/courses`
+* Method: `POST`
+* Payload:
+    ```javascript
+    {
+        auth: {/* authentication object */}
+    }
+    ```
+* Response:
+    ```javascript
+    [
+        {
+            title: "Course Name",
+            url: "Course URL"
+        },
+        /* array of courses */
+    ]
+
+### `/assignments`
+* Method: `POST`
+* Payload:
+    ```javascript
+    {
+        auth: {/* authentication object */},
+        course: {/* course object */}
+    }
+    ```
+* Response:
+    ```javascript
+    [
+        {
+            title: "Assignment Title",
+            dates: {
+                due: "%m/%d/%Y %H:%M:%S",
+                post: "%m/%d/%Y %H:%M:%S",
+                start: "%m/%d/%Y %H:%M:%S"
+            },
+            info: "Assignment Info",
+            submission: "Submission Title",
+            aid: "assignment-id",
+            oid: "outbox-id"
+        },
+        /* array of assignments */
+    ]
+    ```
+
+### `/download`
+* Method: `POST`
+* Payload:
+    ```javascript
+    {
+        auth: {/*authentication object */},
+        assignment: {/* assignment object */},
+        pdf: false /* PDF or original submission format */
+    }
+    ```
+* Response:
+    ```javascript
+    /* Raw file bytes */
+    ```
+
+
+### `/submit`
+* Method: `POST`
+* Payload:
+    * JSON:
+        ```javascript
+        {
+            auth: {/* authorization object */},
+            assignment: {/* assignment object */},
+            title: "Submission Title",
+            filename: "FileName.format"
+        }
+        ```
+    * Form Data:
+        * `userfile`: file
+* Response:
+    ```javascript
+    {
+        file_name: "File Name",
+        file_size: "File Size",
+        page_count: 0, // page count
+        word_count: 0, // word count
+        char_count: 0, // character count
+        image_url_stub: "Paper Image Render URL",
+        status: 1, // 0 = error, 1 = OK
+        uuid: "Submission ID"
+    }
+    ```
 
 # Examples
 
@@ -39,15 +135,15 @@ with requests.Session() as s:
     })
     auth = login_result.json()
 
-    classes_result = s.post(url + "/classes", json=auth)
-    classes = classes_result.json()
-    for c in classes:
+    courses_result = s.post(url + "/courses", json=auth)
+    courses = courses_result.json()
+    for c in courses:
         if "World Lit" in c["title"]:
             world_lit = c
     print(world_lit)
 
-    first_class_data = dict(auth, url=world_lit["url"])
-    assignments_result = s.post(url + "/assignments", json=first_class_data)
+    first_course_data = dict(auth, url=world_lit["url"])
+    assignments_result = s.post(url + "/assignments", json=first_course_data)
     assignments = assignments_result.json()
     print(assignments[0])
 
@@ -59,8 +155,12 @@ with requests.Session() as s:
 
     # In this example case, the fourth assignment 
     uf = open("Document.docx", 'rb')
-    submit_query = dict(auth=json.dumps(auth["auth"]), assignment=json.dumps(assignments[3]),
-                        title="test submission 1", filename="Document.docx")
+    submit_query = dict(
+        auth=json.dumps(auth["auth"]),
+        assignment=json.dumps(assignments[3]),
+        title="test submission 1",
+        filename="Document.docx"
+    )
     r = s.post(url + "/submit", data=submit_query, files={"userfile": uf})
     print(r.json())
 ```
