@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
+import time
 import re
 import io
 
@@ -77,51 +78,67 @@ def submit(
     aid,
     submission_title,
     filename,
-    filebytes,
+    userfile,
     author_first,
     author_last,
     referrer,
 ):
     s = __newSession()
     __setCookies(s, cookies)
-    filebytes = bytes(filebytes)
+
+    file_to_mime = {
+        "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "pdf": "application/pdf",
+        "csv": "text/csv",
+        "xls": "application/vnd.ms-excel",
+        "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "ppt": "application/vnd.ms-powerpoint",
+        "pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        "html": "text/html",
+        "txt": "text/plain",
+        "rtf": "application/rtf",
+        "odt": "application/vnd.oasis.opendocument.text"
+    }
+
+    try:
+        fileending = re.findall(r"\.(.+)$", filename)[0]
+    except IndexError:
+        return "Please submit a valid filename with filetype"
+
+    mimetype = file_to_mime.get(fileending, "application/octet-stream")
+
     query = {"aid": aid, "session-id": cookies["session-id"], "lang": "en_us"}
     form_data = dict(
-        async_request=0,
+        async_request=1,
         author_first=author_first,
         author_last=author_last,
         title=submission_title,
-        filename="SampleSubmission.docx",
-        referer=referrer,
-        # userfile='',
-        db_doc="",
-        dropbox_filename="",
-        google_doc="",
-        google_auth_uri="",
-        token="",
-        submit_button="",
+        filename=filename
     )
-    print(form_data)
+    files = {
+        "userfile": (filename, userfile, mimetype),
+        "Content-Disposition":  f"form-data; name=\"file\"; filename=\"{filename}\"",
+        "Content-Type": mimetype
+    }
+
     r = s.post(
         __SUBMIT_URL,
         data=form_data,
-        files={
-            "userfile": (
-                "Document.docx",
-                open("Document.docx", "rb"),
-                # io.BytesIO(filebytes),
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            ),
-            "Content-Disposition": 'form-data; name="file"; filename="Document.docx"',
-            "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        },
+        files=files,
         headers={"accept": "application/json"},
         params=query,
-        cookies=cookies,
+        cookies=cookies
     )
+
+    # Request didn't return json
+    if not (r.headers["content-type"] == "application/json" and r.json()["errors"] is None):
+        return "Something went wrong during your submission"
+
     uuid = r.json()["uuid"]
     r = None
-    while r == None or r.json()["status"] != 1:
+
+    # Keep asking for metadata until the document is processed
+    while r is None or time.sleep(1) or not r.json()["status"]:
         r = s.post(
             "https://www.turnitin.com/panda/get_submission_metadata.asp",
             params={
@@ -131,14 +148,21 @@ def submit(
                 "uuid": uuid,
             },
         )
+
     metadata = r.json()
     session = cookies["session-id"]
+
+    # Send the confirmation request
     r = s.post(
         (
             f"{__CONFIRM_URL}?lang=en_us&sessionid={session}&"
             f"data-state=confirm&uuid={uuid}"
         )
     )
+
+    if r.text == "null":
+        return "Something went wrong with confirmation"
+
     return metadata
 
 

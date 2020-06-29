@@ -51,16 +51,23 @@ def getDownload():
 
 @app.route("/submit", methods=["POST"])
 def uploadFile():
-    data = request.get_json()
-    turnitin.submit(
-        data["auth"],
-        data["assignment"]["aid"],
-        data["submission"]["title"],
-        data["submission"]["filename"],
-        data["submission"]["file"],
+    data = request.form
+    # use as interactive shell to debug data
+    # while (uin := input('>>> ')) != 'q':
+    #     try:
+    #         print(uin, '=')
+    #         print(repr(eval(uin)))
+    #     except:
+    #         pass
+    return turnitin.submit(
+        json.loads(data["auth"]),
+        json.loads(data["assignment"])["aid"],
+        data["title"],
+        data["filename"],
+        request.files["userfile"].stream,
         data["firstname"],
         data["lastname"],
-        "https://www.turnitin.com/" + data["assignment"]["submission"]
+        "https://www.turnitin.com/" + json.loads(data["assignment"])["submission"]
     )
 
 

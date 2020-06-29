@@ -12,6 +12,10 @@ All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turni
 | `/assignments` | `POST` | `{ auth: [json], url: "url" }` | `[{ title: "title", dates: { due: "due", post: "post", start: "start" }, info: "info", submission: "url" }, ...]` |
 | `/download` | `POST` | `{ auth: [json], assignment: [json], pdf: [true/false] } ` | Raw bytes of file submitted |
 
+| URL | Method | Form | Response |
+|:----|:-------|:-----|:---------|
+| `/submit` | `POST` | `{ auth: "auth", assignment: "assignment", title: "title", filename: "filename", firstname: "firstname", lastname: "lastname" }` | `{ char_count: uint, file_name: "file_name", file_size: "file_size", "image_url_stub": "path_to_image", page_count: uint, status: bool, uuid: "uuid", word_count: uint }`
+
 ## Examples
 JavaScript:
 ```javascript
