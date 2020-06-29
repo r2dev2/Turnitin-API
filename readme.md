@@ -1,6 +1,11 @@
 # Turnitin-API
 An unofficial REST API for Turnitin.
 
+Built by
+[Ronak Badhe](https://github.com/r2dev2bb8/)
+/
+[Kento Nishi](https://github.com/KentoNishi)
+
 ## Endpoints
 
 All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turnitin-api.herokuapp.com). **Use HTTPS to protect your credentials**.
@@ -83,18 +88,17 @@ All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turni
 
 ### `/submit`
 * Method: `POST`
-* Payload:
-    * Form Data:
-        ```javascript
-        {
-            auth: {/* authorization object */},
-            assignment: {/* assignment object */},
-            title: "Submission Title",
-            filename: "FileName.format",
-            userfile: undefined // submission file
-        }
-        ```
-        > The `/submit` endpoint accepts form data, not JSON. 
+* Form Data:
+    ```javascript
+    {
+        auth: {/* authorization object */},
+        assignment: {/* assignment object */},
+        title: "Submission Title",
+        filename: "FileName.format",
+        userfile: undefined // submission file
+    }
+    ```
+    > The `/submit` endpoint accepts form data, not JSON. 
 * Response:
     ```javascript
     {
