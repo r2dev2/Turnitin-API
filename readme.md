@@ -91,8 +91,8 @@ All endpoints are relative to [https://turnitin-api.herokuapp.com](https://turni
 * Form Data:
     ```javascript
     {
-        auth: "authorization object",
-        assignment: "assignment object",
+        auth: {/*authentication object */},
+        assignment: {/* assignment object */},
         title: "Submission Title",
         filename: "FileName.format",
         userfile: undefined // submission file
